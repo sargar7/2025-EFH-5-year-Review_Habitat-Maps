@@ -459,11 +459,12 @@ library(leaflet.esri)
  
 ######################### 2025 EFH 5 year review RShiny App ####################
  
- ##060425
- ##Rshiny using tiled SHP files- URL derived from ArcGIS
+ 
+ ##Rshiny using feature layers - URL derived from ArcGIS
 
  # Load EFH URL data
- URL_dir <- read.csv("C:/Users/Sarah/GOM/Gulf of Mexico - Documents/EFH/EFH Generic Amendment 5/species_habitatmap_url.csv", stringsAsFactors = FALSE)
+ URL_dir <- read.csv("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/species_habitatmap_url.csv", stringsAsFactors = FALSE)
+ View(URL_dir)
  
  # Life stage codes used in data
  life_stages <- unique(URL_dir$lifestage)
@@ -563,9 +564,7 @@ library(leaflet.esri)
  
  shinyApp(ui, server)
  
- ##########notes
- # coloring and naming conventions
- # Github upload and share with John to review code and providing edits 
+ ########## notes 060425 ###########
  # ex .png file and start importing to EFH document for Sept SSC review 
  #currently using feature layers which allow for more dynamic customization AFTER URLs produced 
  # better for on the go edits as Carrie/John view the maps rather than having to recreate in ArcPro before tiling 
