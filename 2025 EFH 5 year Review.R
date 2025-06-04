@@ -48,19 +48,21 @@ library(leaflet.esri)
  gpkg_files <- list.files(gpkg_dir, pattern = "\\.gpkg$", full.names = TRUE)
  View(gpkg_files)
  
+ 
+ 
  # Define base output directory for saving all files
  # Local and do not get pushed to Github
  output_dir <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output"
  
- # Define directory for shapefiles inside the output directory
- shp_dir <- file.path(output_dir, "Shapefiles")
- 
- # Create the shapefiles directory if it doesn't exist
- dir.create(shp_dir, showWarnings = FALSE)
- 
  # Set output dir for .gpkg
  gpkg_output_dir <- file.path(output_dir, "gpkg_output")
  dir.create(gpkg_output_dir, showWarnings = FALSE)
+ 
+ # Output base directory for species-specific shapefiles
+ shp_output_base <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/SHP_species_maps"
+ 
+ # Create base output dir if it doesn't exist
+ dir.create(shp_output_base, recursive = TRUE, showWarnings = FALSE)
  
  
  ######################## LOAD .GPKG HABITAT FILES ##############################
@@ -159,7 +161,7 @@ library(leaflet.esri)
  
  ################ Species Habitat Tables- Full dataset ###################
  
- species_habitat<- read.csv("C:/Users/Sarah/GOM/Gulf of Mexico - Documents/EFH/EFH Generic Amendment 5/species_habitatattributes.csv")
+ species_habitat<- read.csv("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/species_habitatattributes.csv")
  View(species_habitat)
  
  ##separate values that are followed by commas into separate row
@@ -252,144 +254,6 @@ library(leaflet.esri)
  print(unique(species_habitat_clean$species))
  print(species_list)
  print(chunk_indices)
- 
- ########################## GAG EX HTML #######################################
- 
- gag_data <-species_habitat_clean %>% filter(species== "gaggrouper")
- View(gag_data)
- # Get available shapefiles
- available_shapes <- list.files(gpkg_dir, pattern = "\\.gpkg$", full.names = FALSE) %>%
-   tools::file_path_sans_ext()
- 
- # Drop rows with missing shapefiles
- gag_data <- gag_data %>% filter(shapefile_name %in% available_shapes)
- 
- # Set colors and labels
- lifestages <- unique(gag_data$lifestage)
- stage_colors <- setNames(brewer.pal(length(lifestages), "Set2"), lifestages)
- lifestage_labels <- c(
-   egg = "Egg",
-   larvae = "Larvae",
-   postlarvae = "Post Larvae",
-   earlyjuvenile = "Early Juvenile",
-   latejuvenile = "Late Juvenile",
-   adult = "Adult",
-   spawningadult = "Spawning Adult"
- )
- 
- # Output folder for gag
- gag_dir <- file.path(output_dir, "gaggrouper")
- dir.create(gag_dir, showWarnings = FALSE, recursive = TRUE)
- 
- # Loop through life stages
- for (stage in lifestages) {
-   stage_group <- gag_data %>% filter(lifestage == stage)
-   shapes <- unique(stage_group$shapefile_name)
-   
-   stage_label <- lifestage_labels[[stage]]
-   if (is.null(stage_label)) stage_label <- str_to_title(stage)
-   
-   color <- stage_colors[[stage]]
-   title_text <- paste("Gag Grouper -", stage_label, "EFH")
-   safe_id <- paste0("gaggrouper_", stage)
-   html_file <- file.path(gag_dir, paste0("map_", safe_id, ".html"))
-   
-   if (nrow(stage_group) == 0) {
-     blank_map <- leaflet() %>%
-       addProviderTiles("Esri.WorldImagery") %>%
-       setView(lng = -89, lat = 25, zoom = 5) %>%
-       addLabelOnlyMarkers(
-         lng = -98, lat = 31,
-         label = title_text,
-         labelOptions = labelOptions(noHide = TRUE, direction = "center",
-                                     textsize = "20px", fontWeight = "bold", opacity = 1)
-       )
-     saveWidget(blank_map, file = html_file, selfcontained = TRUE)
-     next
-   }
-   
-   efh_map <- leaflet() %>%
-     addProviderTiles("Esri.WorldImagery") %>%
-     setView(lng = -89, lat = 25, zoom = 5) %>%
-     addLabelOnlyMarkers(
-       lng = -98, lat = 31,
-       label = title_text,
-       labelOptions = labelOptions(noHide = TRUE, direction = "center",
-                                   textsize = "20px", fontWeight = "bold", opacity = 1)
-     )
-   
-   for (shape_name in shapes) {
-     gpkg_file <- file.path(gpkg_dir, paste0(shape_name, ".gpkg"))
-     if (file.exists(gpkg_file)) {
-       try({
-         shp <- st_read(gpkg_file, quiet = TRUE)
-         efh_map <- efh_map %>%
-           addPolygons(data = shp,
-                       fillColor = color,
-                       fillOpacity = 1,
-                       color = color,
-                       weight = 1,
-                       group = shape_name,
-                       label = shape_name)
-         rm(shp); gc()
-       }, silent = TRUE)
-     }
-   }
-   
-   saveWidget(efh_map, file = html_file, selfcontained = FALSE)
-   message("Saved: ", html_file)
- }
- 
- ###selfcontained=TRUE running into memory issues 
- 
- ##one html map with lifestage toggle 
- 
- # Initialize map
- gag_map <- leaflet() %>%
-   addProviderTiles("Esri.WorldImagery") %>%
-   setView(lng = -89, lat = 25, zoom = 5)
- 
- # Add polygons by lifestage group
- for (stage in lifestages) {
-   stage_data <- gag_data %>% filter(lifestage == stage)
-   shapes <- unique(stage_data$shapefile_name)
-   color <- stage_colors[[stage]]
-   layer_name <- lifestage_labels[[stage]] %||% str_to_title(stage)
-   
-   for (shape_name in shapes) {
-     gpkg_file <- file.path(gpkg_dir, paste0(shape_name, ".gpkg"))
-     if (file.exists(gpkg_file)) {
-       shp <- tryCatch(st_read(gpkg_file, quiet = TRUE), error = function(e) NULL)
-       if (!is.null(shp)) {
-         gag_map <- gag_map %>%
-           addPolygons(
-             data = shp,
-             fillColor = color,
-             fillOpacity = 1,
-             color = color,
-             weight = 1,
-             group = layer_name,
-             label = shape_name
-           )
-         rm(shp); gc()
-       }
-     }
-   }
- }
- 
- # Add layer controls
- gag_map <- gag_map %>%
-   addLayersControl(
-     overlayGroups = lifestage_labels[lifestages],
-     options = layersControlOptions(collapsed = FALSE)
-   )
- 
- # Save HTML (non-selfcontained)
- html_file <- file.path(output_dir, "map_gaggrouper.html")
- saveWidget(gag_map, file = html_file, selfcontained = FALSE)
- message("Saved map:", html_file)n       
- 
- 
  
  ########################### HTML MAP PRODUCTION ###############################
  # Loop by species
@@ -533,125 +397,6 @@ library(leaflet.esri)
  ##### tileing creates a url for each species lifestage map and can put that into an r shiny app
  
  
- # Input .gpkg directory
- gpkg_dir <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/2025 GIS Clipped Habitat/Converted_GPKG"
- 
- # Output base directory for species-specific shapefiles
- shp_output_base <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/SHP_species_maps"
- 
- # Create base output dir if it doesn't exist
- dir.create(shp_output_base, recursive = TRUE, showWarnings = FALSE)
- 
- # Filter Gag Grouper, Red snapper and Red Drum
- speciessubset_data <- species_habitat_clean %>% filter(species == "gaggrouper", "redsnapper","reddrum")
- subset_lifestages <- unique(speciessubset_data$lifestage)
- 
- # Function to process and export each lifestage shapefile
- export_lifestage_shp <- function(stage) {
-   shape_names <- speciessubset_data %>%
-     filter(lifestage == stage) %>%
-     pull(shapefile_name) %>%
-     unique()
-   
-   combined_list <- list()
-   
-   for (name in shape_names) {
-     gpkg_path <- file.path(gpkg_dir, paste0(name, ".gpkg"))
-     if (file.exists(gpkg_path)) {
-       shp <- tryCatch(st_read(gpkg_path, quiet = TRUE), error = function(e) NULL)
-       if (!is.null(shp) && nrow(shp) > 0) {
-         shp$source_file <- name
-         combined_list[[length(combined_list) + 1]] <- shp
-       } else {
-         message("Skipped empty or unreadable file: ", name)
-       }
-     }
-   }
-   
-   if (length(combined_list) > 0) {
-     common_cols <- Reduce(intersect, lapply(combined_list, names))
-     combined_clean <- lapply(combined_list, function(x) x[, common_cols])
-     combined_sf <- do.call(rbind, combined_clean)
-     
-     # Species-specific output folder
-     species_dir <- file.path(shp_output_base, "gaggrouper")
-     dir.create(species_dir, recursive = TRUE, showWarnings = FALSE)
-     
-     # Shapefile path
-     shp_path <- file.path(species_dir, paste0("gaggrouper_", stage, ".shp"))
-     st_write(combined_sf, shp_path, delete_layer = TRUE)
-     message("Saved shapefile: ", shp_path)
-   } else {
-     message("No shapefiles found for lifestage: ", stage)
-   }
- }
- 
- # Run for all lifestages
- lapply(gag_lifestages, export_lifestage_shp)
- 
- ######################### Filter Gag Grouper, Red snapper and Red Drum ############
- speciessubset_data <- species_habitat_clean %>%
-   filter(species %in% c("gaggrouper", "redsnapper", "reddrum"))
- 
- # Get unique species and lifestages
- species_list <- unique(speciessubset_data$species)
- lifestage_list <- unique(speciessubset_data$lifestage)
- 
- # Function to process and export each lifestage shapefile per species
- export_lifestage_shp <- function(species_name, stage) {
-   # Get associated shapefile names for this species and lifestage
-   shape_names <- speciessubset_data %>%
-     filter(species == species_name, lifestage == stage) %>%
-     pull(shapefile_name) %>%
-     unique()
-   
-   combined_list <- list()
-   
-   for (name in shape_names) {
-     gpkg_path <- file.path(gpkg_dir, paste0(name, ".gpkg"))
-     if (file.exists(gpkg_path)) {
-       shp <- tryCatch(st_read(gpkg_path, quiet = TRUE), error = function(e) NULL)
-       if (!is.null(shp) && nrow(shp) > 0) {
-         shp$source_file <- name
-         combined_list[[length(combined_list) + 1]] <- shp
-       } else {
-         message("Skipped empty or unreadable file: ", name)
-       }
-     }
-   }
-   
-   # Create species-specific output folder
-   species_dir <- file.path(shp_output_base, species_name)
-   dir.create(species_dir, recursive = TRUE, showWarnings = FALSE)
-   
-   # Define output shapefile path
-   shp_path <- file.path(species_dir, paste0(species_name, "_", stage, ".shp"))
-   
-   if (length(combined_list) > 0) {
-     # Combine data with common columns only
-     common_cols <- Reduce(intersect, lapply(combined_list, names))
-     combined_clean <- lapply(combined_list, function(x) x[, common_cols])
-     combined_sf <- do.call(rbind, combined_clean)
-   } else {
-     # Create an empty sf object with minimal structure and CRS
-     combined_sf <- st_sf(
-       data.frame(source_file = character()),
-       geometry = st_sfc(crs = 4326)
-     )
-     message("No data found. Creating empty shapefile for ", species_name, " - ", stage)
-   }
-   
-   # Write shapefile (empty or not)
-   st_write(combined_sf, shp_path, delete_layer = TRUE)
-   message("Saved shapefile: ", shp_path)
- }
- 
- # Loop through all species and their corresponding lifestages
- for (sp in species_list) {
-   sp_lifestages <- unique(speciessubset_data$lifestage[speciessubset_data$species == sp])
-   lapply(sp_lifestages, function(stage) export_lifestage_shp(sp, stage))
- }
- 
  ######################### ALL SPECIES SHP MAPS ############################
 
  # Get all unique species and lifestage combinations from your full dataset
@@ -710,27 +455,6 @@ library(leaflet.esri)
  apply(species_lifestage_combos, 1, function(row) {
    export_lifestage_shp(species_name = row["species"], stage = row["lifestage"])
  })
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  
 ######################### 2025 EFH 5 year review RShiny App ####################
