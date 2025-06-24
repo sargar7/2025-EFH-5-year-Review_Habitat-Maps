@@ -8,17 +8,20 @@ install.packages("sf")
 install.packages("raster")
 install.packages("ggmap")
 install.packages("stringr")
-install.packages("tmap")
 install.packages("ggspatial")
 install.packages("leaflet")
-install.packages("webshot2") #saving .png image of maps 
-install.packages("htmlwidgets")
+install.packages("htmlwidgets") #save .html maps 
 install.packages ("rmapshaper") ##simplify shapfiles but maintains spatial data 
-instlall.packages ("RColorBrewer") 
-install.packages ("shinyjs")
+instlall.packages ("RColorBrewer") ##colorpallete
+install.packages ("shinyjs") #javascript reader in shiny
 install.packages("leaflet.esr")
+install.packages("shinydashboard")
+install.packages("jsonlite")
+install.packages("leaflet.extras")
+install.packages ("tmap") ##.png maps 
 
- 
+
+
  ##############################################################################
  ################# EFH 5 YEAR REVIEW SPECIES HABITAT MAPS 2025 ###############
  
@@ -32,10 +35,13 @@ install.packages("leaflet.esr")
  library(webshot2)
  library(rmapshaper) # simplify shapefiles
  library(viridisLite)
- library(RColorBrewer)
+ library(RColorBrewer) #lifestage color convention
  library(shiny)
 library(leaflet.esri)
-
+library(shinydashboard)
+library(jsonlite) # try to process tile URLs
+library(leaflet.extras)
+library(tmap)
  
  ###### DIRECTORIES ######
  
@@ -49,14 +55,9 @@ library(leaflet.esri)
  View(gpkg_files)
  
  
- 
- # Define base output directory for saving all files
+ # Define base output directory for saving all map files
  # Local and do not get pushed to Github
  output_dir <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output"
- 
- # Set output dir for .gpkg
- gpkg_output_dir <- file.path(output_dir, "gpkg_output")
- dir.create(gpkg_output_dir, showWarnings = FALSE)
  
  # Output base directory for species-specific shapefiles
  shp_output_base <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/SHP_species_maps"
@@ -64,6 +65,11 @@ library(leaflet.esri)
  # Create base output dir if it doesn't exist
  dir.create(shp_output_base, recursive = TRUE, showWarnings = FALSE)
  
+ # Output base directory for species-specific shapefiles
+ png_output <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/PNG_maps"
+ 
+ # Create base output dir if it doesn't exist
+ dir.create(png_output, recursive = TRUE, showWarnings = FALSE)
  
  ######################## LOAD .GPKG HABITAT FILES ##############################
  
@@ -96,7 +102,7 @@ library(leaflet.esri)
  }
  
  names(shapefile_list) <- tolower(names(shapefile_list)) #double check all are lower
- 
+ View(shapefile_list)
  
  ######################### .gpkg summary ####################################
  
@@ -128,7 +134,7 @@ library(leaflet.esri)
  str(wca_layer)
  str(hb_layer)
  str(em_est_er1)
- 
+
  leaflet() %>%
    addTiles() %>%
    addPolygons(data = wca_layer, 
@@ -230,6 +236,7 @@ library(leaflet.esri)
  # Get all species
  species_list <- unique(species_habitat_clean$species)
  View(species_list)
+ print(species_list)
  
  # Optional: Chunk size for partial runs
  chunk_size <- 5  # Set to desired number of species per chunk, or NULL to process all at once
@@ -389,13 +396,6 @@ library(leaflet.esri)
 ## 46 'missing' shapefiles- no data to inform these layers 
 ## not an error per se, but area for developed research- highlight in research priorities 
  
-
- 
- ####################################### SHP MAPS #####################################
- #####052925
- ##### create shapefiles per lifestage to give to basher to tile #######
- ##### tileing creates a url for each species lifestage map and can put that into an r shiny app
- 
  
  ######################### ALL SPECIES SHP MAPS ############################
 
@@ -456,11 +456,168 @@ library(leaflet.esri)
    export_lifestage_shp(species_name = row["species"], stage = row["lifestage"])
  })
  
- 
+######################## ALL SPECIES PNG MAPS ################################
+## Loop through all SHP_species_maps to create .png for all species habitats
+
+# Paths to species shapefiles parent dir and PNG output parent dir
+shp_parent_dir <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/SHP_species_maps"
+png_parent_dir <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/PNG_maps"
+
+# Static basemap GeoTIFF path
+basemap_path <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/Basemaps/ESRI_basemap_light.tif"
+basemap <- terra::rast(basemap_path)
+
+# Define Gulf of Mexico bounding box in EPSG:4326
+gulf_extent <- terra::ext(-98, -80, 23, 34)
+
+# Crop raster basemap to Gulf extent
+basemap_crop <- terra::crop(basemap, gulf_extent)
+
+# Define lifestage labels and colors
+lifestage_labels <- c(
+  "egg" = "Egg",
+  "larvae" = "Larvae",
+  "postlarvae" = "Post Larvae",
+  "earlyjuvenile" = "Early Juvenile",
+  "latejuvenile" = "Late Juvenile",
+  "adult" = "Adult",
+  "spawningadult" = "Spawning Adult"
+)
+lifestages <- names(lifestage_labels)
+stage_colors <- setNames(brewer.pal(length(lifestages), "Set2"), lifestages)
+
+# Get species list (folders in shp_parent_dir)
+species_list <- list.dirs(shp_parent_dir, full.names = FALSE, recursive = FALSE)
+message("Found species: ", paste(species_list, collapse = ", "))
+
+
+for (species_name in species_list) {
+  message("Processing species: ", species_name)
+  
+  shp_species_dir <- file.path(shp_parent_dir, species_name)
+  png_species_dir <- file.path(png_parent_dir, species_name)
+  dir.create(png_species_dir, recursive = TRUE, showWarnings = FALSE)
+  
+  # List all shapefiles in species folder
+  shp_files <- list.files(shp_species_dir, pattern = "\\.shp$", full.names = TRUE)
+  
+  # Get lifestages that have shapefiles present
+  shapefile_lifestages <- sapply(shp_files, function(f) {
+    sub(paste0(species_name, "_"), "", tools::file_path_sans_ext(basename(f)))
+  })
+  
+  for (lifestage in lifestages) {
+    
+    # Check if shapefile exists for this lifestage
+    shp_path <- file.path(shp_species_dir, paste0(species_name, "_", lifestage, ".shp"))
+    has_shp <- file.exists(shp_path)
+    
+    if (!has_shp) {
+      message("No shapefile found for ", species_name, " ", lifestage, ". Creating blank map.")
+      
+      # Build blank map with only basemap + title label
+      map_blank <- tm_shape(basemap_crop) +
+        tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+        tm_title(
+          text = paste0(toupper(substring(species_name, 1, 1)), substring(species_name, 2), " - ", lifestage_labels[[lifestage]]),
+          position = c("left", "top"),
+          size = 2.2,
+          fontface = "bold"
+        ) +
+        tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+      
+      png_file <- file.path(png_species_dir, paste0(species_name, "_", lifestage, ".png"))
+      tmap_save(map_blank, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+      next
+    }
+    
+    # If shapefile exists, continue with your existing workflow
+    shp <- st_read(shp_path, quiet = TRUE)
+    
+    # Blurb: Fix invalid geometries to avoid errors in mapping
+    message("Fixing invalid geometries (if any) in shapefile...")
+    shp <- st_make_valid(shp)
+    shp <- shp[st_is_valid(shp), ]
+    
+    if (nrow(shp) == 0) {
+      message("No valid features in shapefile for ", species_name, " ", lifestage, ". Creating blank map.")
+      
+      # Create blank map as above
+      map_blank <- tm_shape(basemap_crop) +
+        tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+        tm_title(
+          text = paste0(toupper(substring(species_name, 1, 1)), substring(species_name, 2), " - ", lifestage_labels[[lifestage]]),
+          position = c("left", "top"),
+          size = 2.2,
+          fontface = "bold"
+        ) +
+        tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+      
+      png_file <- file.path(png_species_dir, paste0(species_name, "_", lifestage, ".png"))
+      tmap_save(map_blank, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+      next
+    }
+    
+    # Reproject if needed
+    if (st_crs(shp)$epsg != 4326) {
+      shp <- st_transform(shp, 4326)
+    }
+    
+    # Crop shapefile to Gulf bounding box
+    gulf_bbox <- st_as_sfc(st_bbox(c(xmin = -98, ymin = 23, xmax = -80, ymax = 34), crs = 4326))
+    shp_crop <- st_crop(shp, gulf_bbox)
+    
+    if (nrow(shp_crop) == 0) {
+      message("No spatial data after cropping for ", species_name, " ", lifestage, ". Creating blank map.")
+      
+      # Create blank map as above
+      map_blank <- tm_shape(basemap_crop) +
+        tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+        tm_title(
+          text = paste0(toupper(substring(species_name, 1, 1)), substring(species_name, 2), " - ", lifestage_labels[[lifestage]]),
+          position = c("left", "top"),
+          size = 2.2,
+          fontface = "bold"
+        ) +
+        tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+      
+      png_file <- file.path(png_species_dir, paste0(species_name, "_", lifestage, ".png"))
+      tmap_save(map_blank, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+      next
+    }
+    
+    # Build full map with spatial polygons
+    map <- tm_shape(basemap_crop) +
+      tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+      tm_shape(shp_crop) +
+      tm_polygons(
+        col = stage_colors[[lifestage]],
+        border.col = stage_colors[[lifestage]],
+        fill_alpha = .85
+      ) +
+      tm_title(
+        text = paste0(toupper(substring(species_name, 1, 1)), substring(species_name, 2), " - ", lifestage_labels[[lifestage]]),
+        position = c("left", "top"),
+        size = 2.2,
+        fontface = "bold"
+      ) +
+      tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+    
+    png_file <- file.path(png_species_dir, paste0(species_name, "_", lifestage, ".png"))
+    tmap_save(map, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+    
+    message("✅ Saved PNG: ", png_file)
+  }
+}
+
+message("All done!")
+
+
+
 ######################### 2025 EFH 5 year review RShiny App ####################
  
  
- ##Rshiny using feature layers - URL derived from ArcGIS
+ ############### Rshiny using feature layers - URL derived from ArcGIS ############
 
  # Load EFH URL data
  URL_dir <- read.csv("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/species_habitatmap_url.csv", stringsAsFactors = FALSE)
@@ -479,30 +636,32 @@ library(leaflet.esri)
    adult = "Adult",
    spawningadult = "Spawning Adult"
  )
- 
- # Color palette for each life stage
- palette_colors <- brewer.pal(n = max(3, length(life_stages)), name = "Set1")
- lifestage_colors <- setNames(palette_colors[1:length(life_stages)], life_stages)
+ lifestages <- names(lifestage_labels)
+ stage_colors <- setNames(brewer.pal(length(lifestages), "Set2"), lifestages)
  
  # Gulf bounds
  gulf_bounds <- list(lng1 = -98, lat1 = 23, lng2 = -81, lat2 = 34)
  
  # UI
+ # --- UI ---
  ui <- fluidPage(
-   titlePanel("2025 EFH 5 Year Review - Species Habitat Maps"),
+   titlePanel("2025 EFH 5-Year Review - Species Habitat Maps"),
    sidebarLayout(
      sidebarPanel(
        selectInput("species", "Select Species", choices = unique(URL_dir$species)),
-       checkboxGroupInput("lifestages", "Select Life Stages", choices = life_stages, selected = life_stages)
+       checkboxGroupInput("lifestages", "Select Life Stages",
+                          choices = setNames(lifestages, lifestage_labels),
+                          selected = lifestages)
      ),
      mainPanel(
-       leafletOutput("map", height = "600px")
+       leafletOutput("map", height = "700px")
      )
    )
  )
  
- # Server
+ # --- Server ---
  server <- function(input, output, session) {
+   
    output$map <- renderLeaflet({
      leaflet() %>%
        addProviderTiles("Esri.WorldImagery") %>%
@@ -518,15 +677,15 @@ library(leaflet.esri)
      proxy <- leafletProxy("map") %>%
        clearControls()
      
-     # Clear only those groups that were previously selected
-     for (grp in life_stages) {
+     # Clear previously rendered groups
+     for (grp in lifestages) {
        proxy <- proxy %>% clearGroup(grp)
      }
      
-     # Add EFH layers for each selected life stage
+     # Add each selected layer
      for (i in seq_len(nrow(selected_layers))) {
        stage <- selected_layers$lifestage[i]
-       color <- unname(lifestage_colors[stage])
+       color <- stage_colors[[stage]]
        
        proxy %>%
          addEsriFeatureLayer(
@@ -544,14 +703,14 @@ library(leaflet.esri)
          )
      }
      
-     # Custom legend showing only currently selected layers
+     # Build dynamic legend for selected lifestages
      legend_html <- paste0(
-       "<div style='background:white; padding:10px; border-radius:5px; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);'><strong>Life Stages</strong><br>",
+       "<div style='background:white; padding:10px; border-radius:5px; box-shadow:2px 2px 6px rgba(0,0,0,0.3);'><strong>Life Stages</strong><br>",
        paste0(
          "<div style='margin-bottom:4px;'><span style='display:inline-block; width:12px; height:12px; background:",
-         lifestage_colors[input$lifestages],
-         "; margin-right:5px;'></span>",
-         nice_names[input$lifestages],  # Use nice labels here only
+         stage_colors[input$lifestages],
+         "; margin-right:6px;'></span>",
+         lifestage_labels[input$lifestages],
          "</div>", collapse = ""
        ),
        "</div>"
@@ -562,9 +721,11 @@ library(leaflet.esri)
    })
  }
  
+ # --- Run App ---
  shinyApp(ui, server)
  
  ########## notes 060425 ###########
+ # working well for app production but is slow when toggling between species and lifestages 
  # ex .png file and start importing to EFH document for Sept SSC review 
  #currently using feature layers which allow for more dynamic customization AFTER URLs produced 
  # better for on the go edits as Carrie/John view the maps rather than having to recreate in ArcPro before tiling 
@@ -577,5 +738,21 @@ library(leaflet.esri)
 # Layer interactivity	      ✅ Yes — support popups, styling, c          ❌ No — static raster image (no geometry info)
 # Custom styling (in R)   	✅ Yes — fill color, border, etc.	          ❌ No — styling must be done before publishing
 # Speed/performance       	❌ Slower (downloads full features)	        ✅ Much faster (just image tiles)
-
+ 
+ ## look up lazy loading 
+## use a cache of pre-loaded maps 
+ 
+ #### tried but did not succeed or result in faster rendering:
+ # pre loading with javascript 
+     ##worked better but was running into max feature count error- max feature count =2000
+ # Pulling GEOJSON URL objects before then transforming to sf objects so the shiny app can pull all appropraite layers without loss of spatial data
+ 
+ 
+ # RShiny with PNG maps #
+ # con is less interactive, but may render maps more readily but may struggle because they are not spatial images 
+ ### created a www/ folder to pull in species png maps but was running into error in addOverlayImage ion leafletextras2 package
+ 
+ ##overall the URL feature layers are working the best for app production, but memory issues persist- how can we overcome the memory issues
+ #can John/Lisa/Basher help? 
+ 
  
