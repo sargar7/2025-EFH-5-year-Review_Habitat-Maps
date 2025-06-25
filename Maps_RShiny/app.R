@@ -10,6 +10,8 @@
 
 #### EFH 5 year review App
 
+library(shiny)
+source("global.r")
 
 # Define UI for application that displays species-lifestage maps for Gulf Species
 # --- UI ---

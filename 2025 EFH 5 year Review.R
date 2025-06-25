@@ -612,7 +612,102 @@ for (species_name in species_list) {
 
 message("All done!")
 
+###
 
+#gaggrouper viridis colorscheme for habitat maps 
+
+# Run only for Gag Grouper with viridis colors
+library(tmap)
+library(sf)
+library(viridis)
+
+# Setup
+species_name <- "gaggrouper"
+shp_species_dir <- file.path(shp_parent_dir, species_name)
+png_species_dir <- file.path(png_parent_dir, species_name)
+dir.create(png_species_dir, recursive = TRUE, showWarnings = FALSE)
+# Assign a unique viridis color to each lifestage
+stage_colors <- setNames(viridis(length(lifestages), option = "C"), lifestages)
+
+
+# Basemap assumed to be pre-loaded as 'basemap_crop'
+# lifestages and lifestage_labels should already be defined
+
+# Static basemap GeoTIFF path
+## use dark basemap 
+
+basemap_path <- "C:/Users/Sarah/OneDrive - GOM/Desktop/Generic AM 5 GIS files/Maps_Output/Basemaps/ESRI_basemap_light.tif"
+basemap <- terra::rast(basemap_path)
+
+# Define Gulf of Mexico bounding box in EPSG:4326
+gulf_extent <- terra::ext(-98, -80, 23, 34)
+
+# Crop raster basemap to Gulf extent
+basemap_crop <- terra::crop(basemap, gulf_extent)
+
+
+for (lifestage in lifestages) {
+  shp_path <- file.path(shp_species_dir, paste0(species_name, "_", lifestage, ".shp"))
+  has_shp <- file.exists(shp_path)
+  
+  title_text <- paste0(
+    toupper(substr(species_name, 1, 1)),
+    substr(species_name, 2, nchar(species_name)),
+    " - ", lifestage_labels[[lifestage]]
+  )
+  png_file <- file.path(png_species_dir, paste0(species_name, "_", lifestage, "_viridis.png"))
+  
+  if (!has_shp) {
+    map_blank <- tm_shape(basemap_crop) +
+      tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+      tm_title(text = title_text, position = c("left", "top"), size = 2.2, fontface = "bold") +
+      tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+    
+    tmap_save(map_blank, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+    next
+  }
+  
+  shp <- st_read(shp_path, quiet = TRUE)
+  shp <- st_make_valid(shp)
+  shp <- shp[st_is_valid(shp), ]
+  
+  if (nrow(shp) == 0) {
+    map_blank <- tm_shape(basemap_crop) +
+      tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+      tm_title(text = title_text, position = c("left", "top"), size = 2.2, fontface = "bold") +
+      tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+    
+    tmap_save(map_blank, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+    next
+  }
+  
+  shp <- st_transform(shp, 4326)
+  bbox <- st_as_sfc(st_bbox(c(xmin = -98, ymin = 23, xmax = -80, ymax = 34), crs = 4326))
+  shp_crop <- st_crop(shp, bbox)
+  
+  if (nrow(shp_crop) == 0) {
+    map_blank <- tm_shape(basemap_crop) +
+      tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+      tm_title(text = title_text, position = c("left", "top"), size = 2.2, fontface = "bold") +
+      tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+    
+    tmap_save(map_blank, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+    next
+  }
+  
+  viridis_color <- stage [[lifestage]]
+  
+  map <- tm_shape(basemap_crop) +
+    tm_rgb(col.scale = tm_scale_rgb(max_color_value = 255)) +
+    tm_shape(shp_crop) +
+    tm_polygons(col = viridis_color, border.col = viridis_color, fill.alpha = 0.85) +
+    tm_title(text = title_text, position = c("left", "top"), size = 2.2, fontface = "bold") +
+    tm_layout(legend.show = FALSE, frame = FALSE, outer.margins = FALSE)
+  
+  tmap_save(map, filename = png_file, width = 10, height = 8, units = "in", dpi = 300)
+}
+
+message("✅ All Gag Grouper PNGs saved using viridis colors.")
 
 ######################### 2025 EFH 5 year review RShiny App ####################
  
@@ -760,11 +855,6 @@ shinyApp(ui, server)
  # pre loading with javascript 
      ##worked better but was running into max feature count error- max feature count =2000
  # Pulling GEOJSON URL objects before then transforming to sf objects so the shiny app can pull all appropraite layers without loss of spatial data
- 
- 
- # RShiny with PNG maps #
- # con is less interactive, but may render maps more readily but may struggle because they are not spatial images 
- ### created a www/ folder to pull in species png maps but was running into error in addOverlayImage ion leafletextras2 package
  
  ##overall the URL feature layers are working the best for app production, but memory issues persist- how can we overcome the memory issues
  #can John/Lisa/Basher help? 
