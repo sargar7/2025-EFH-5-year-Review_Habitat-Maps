@@ -12,9 +12,9 @@ install.packages("ggspatial")
 install.packages("leaflet")
 install.packages("htmlwidgets") #save .html maps 
 install.packages ("rmapshaper") ##simplify shapfiles but maintains spatial data 
-instlall.packages ("RColorBrewer") ##colorpallete
+install.packages ("RColorBrewer") ##colorpallete
 install.packages ("shinyjs") #javascript reader in shiny
-install.packages("leaflet.esr")
+install.packages("leaflet.esri")
 install.packages("shinydashboard")
 install.packages("jsonlite")
 install.packages("leaflet.extras")
@@ -627,7 +627,7 @@ message("All done!")
  life_stages <- unique(URL_dir$lifestage)
  
  # Nicely formatted labels for legend display
- nice_names <- c(
+lifestage_labels <- c(
    egg = "Egg",
    larvae = "Larvae",
    postlarvae = "Post Larvae",
@@ -674,20 +674,18 @@ message("All done!")
      selected_layers <- URL_dir %>%
        filter(species == input$species, lifestage %in% input$lifestages)
      
-     proxy <- leafletProxy("map") %>%
-       clearControls()
+     # Create proxy object once
+     proxy <- leafletProxy("map")
      
-     # Clear previously rendered groups
-     for (grp in lifestages) {
-       proxy <- proxy %>% clearGroup(grp)
-     }
+     # Clear only feature groups (not basemap)
+     proxy <- proxy %>% clearGroup(lifestages)
      
      # Add each selected layer
      for (i in seq_len(nrow(selected_layers))) {
        stage <- selected_layers$lifestage[i]
        color <- stage_colors[[stage]]
        
-       proxy %>%
+       proxy <- proxy %>%
          addEsriFeatureLayer(
            url = selected_layers$url[i],
            group = stage,
@@ -716,8 +714,8 @@ message("All done!")
        "</div>"
      )
      
-     proxy %>%
-       addControl(html = legend_html, position = "topright")
+     proxy %>% addControl(html = legend_html, position = "topright", layerId = "legend")
+     
    })
  }
  
