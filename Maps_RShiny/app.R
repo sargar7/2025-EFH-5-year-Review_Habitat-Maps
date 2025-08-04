@@ -7,107 +7,154 @@
 #    https://shiny.posit.co/
 #
 
+#getwd() ### double check correct wd
 
 #### EFH 5 year review App
 
 library(shiny)
 source("global.r")
 
-# Define UI for application that displays species-lifestage maps for Gulf Species
-# --- UI ---
+## APP using RDS files on the server
+#Gulf of Mexico - Documents\EFH\EFH Generic Amendment 5\SHP_species_maps\RDS_simplified
+
 ui <- fluidPage(
-  titlePanel("2025 EFH 5-Year Review - Species Habitat Maps"),
+  theme = shinytheme("flatly"),
+  tags$style(HTML("
+    .shiny-input-container { margin-bottom: 1rem; }
+    .sidebar .well { background: #f8f9fa; border: none; }
+    #habitat_map { border: 2px solid #e2e3e5; border-radius: 5px; }
+    .introjs-tooltip { font-size: 1.2rem; }
+  ")),
+  introjsUI(),
+  
+  titlePanel("Gulf of Mexico - EFH Habitat Maps"),
   sidebarLayout(
     sidebarPanel(
-      selectInput("species", "Select Species", choices = unique(URL_dir$species)),
-      checkboxGroupInput("lifestages", "Select Life Stages",
-                         choices = setNames(lifestages, lifestage_labels),
-                         selected = lifestages)
+      tags$h4("Project Overview"),
+      tags$p("This app allows users to explore EFH polygons for managed species by life stage."),
+      
+      actionButton("start_tour", "Take Tour", class = "btn-primary"),
+      actionButton("layer_info", "Layer Info", class = "btn-info"),
+      br(), br(),
+      
+      div(id = "species_box",
+          selectInput("selected_species", "Select Species:", choices = species_labels)
+      ),
+      checkboxGroupInput("selected_stages", "Select Life Stages to Display:",
+                         choices = lifestage_labels,
+                         selected = lifestage_labels),
+      
+      tags$div("Data updated: July 2025", style = "font-size:80%; color:grey;")
     ),
     mainPanel(
-      leafletOutput("map", height = "700px")
+      leafletOutput("habitat_map", height = "90vh") %>% withSpinner(color = "#2C3E50")
     )
   )
 )
 
-# --- Server ---
 server <- function(input, output, session) {
+  # Start Tour
+  observeEvent(input$start_tour, {
+    introjs(session, options = list(steps = data.frame(
+      element = c("#species_box", "#habitat_map", "#layer_info"),
+      intro = c(
+        "Use the dropdown to explore EFH layers for each species.",
+        "The map displays EFH polygons by selected life stages.",
+        "Click 'Layer Info' to view descriptions of each map layer."
+      ),
+      position = c("bottom", "top", "top")
+    )))
+  })
   
-  # Initialize map
-  output$map <- renderLeaflet({
+  # Render the map with Esri basemap
+  output$habitat_map <- renderLeaflet({
     leaflet() %>%
-      addProviderTiles("Esri.WorldImagery") %>%
+      leaflet.esri::addEsriBasemapLayer("Imagery") %>%
       fitBounds(gulf_bounds$lng1, gulf_bounds$lat1, gulf_bounds$lng2, gulf_bounds$lat2)
   })
   
-  # When species changes, preload all 7 lifestage layers (hidden initially)
-  observeEvent(input$species, {
-    proxy <- leafletProxy("map")
+  # Add EFH polygons and legend
+  
+  observe({
+    req(input$selected_species)
     
-    # Clear old layers and legend
-    proxy %>% clearGroup(lifestages) %>% removeControl("legend")
+    leafletProxy("habitat_map") %>%
+      clearShapes() %>%
+      clearControls()
     
-    species_layers <- URL_dir %>% filter(species == input$species)
+    species_code <- names(species_labels)[species_labels == input$selected_species]
+    selected_stages <- input$selected_stages
     
-    # Add all lifestage layers (hide initially)
-    for (i in seq_len(nrow(species_layers))) {
-      stage <- species_layers$lifestage[i]
-      color <- stage_colors[[stage]]
+    for (stage in lifestages) {
+      label <- lifestage_labels[[stage]]
+      stage_data <- rds_files[[species_code]][[stage]]
       
-      proxy <- proxy %>%
-        addEsriFeatureLayer(
-          url = species_layers$url[i],
-          group = stage,
-          options = featureLayerOptions(
-            style = list(
-              color = color,
-              fillColor = color,
-              weight = 1,
-              opacity = 1,
-              fillOpacity = 0.75
-            )
+      if (label %in% selected_stages && !is.null(stage_data)) {
+        leafletProxy("habitat_map") %>%
+          addPolygons(
+            data = stage_data,
+            color = stage_colors[[stage]],
+            weight = 2,
+            opacity = 1,
+            fillOpacity = 0.8,
+            group = label,
+            label = label
           )
-        ) %>%
-        hideGroup(stage)
+      }
+    }
+    
+    # Add legend
+    visible_stages <- lifestages[
+      sapply(rds_files[[species_code]], Negate(is.null)) & 
+        lifestage_labels %in% selected_stages
+    ]
+    
+    if (length(visible_stages) > 0) {
+      leafletProxy("habitat_map") %>%
+        addLegend(
+          position = "topright",
+          colors = stage_colors[visible_stages],
+          labels = lifestage_labels[visible_stages],
+          title = "Life Stage"
+        )
     }
   })
   
-  # Toggle visibility based on checkbox selection
-  observe({
-    req(input$lifestages)
+  # Show Layer Info Modal ##comment out to see if this helps run the app better
+ observeEvent(input$layer_info, {
+    req(input$selected_species)
     
-    proxy <- leafletProxy("map")
+    species_code <- names(species_labels)[species_labels == input$selected_species]
     
-    # Hide all groups
-    for (stage in lifestages) {
-      proxy <- proxy %>% hideGroup(stage)
-    }
+    info_filtered <- polygon_layer_data %>%
+      filter(species == species_code, lifestage %in% lifestages) %>%
+      select(lifestage, shapefile_name) %>%
+      distinct()
     
-    # Show selected groups
-    for (stage in input$lifestages) {
-      proxy <- proxy %>% showGroup(stage)
-    }
+    info_html <- paste(
+      sapply(names(lifestage_labels), function(ls) {
+        shp_names <- info_filtered$shapefile_name[info_filtered$lifestage == ls]
+        if (length(shp_names) > 0) {
+          paste0("<b>", lifestage_labels[[ls]], ":</b> ", paste(shp_names, collapse = ", "))
+        } else {
+          NULL
+        }
+      }),
+      collapse = "<br><br>"
+    )
     
-    # Update legend
-    proxy %>% removeControl("legend")
-    
-    if (length(input$lifestages) > 0) {
-      legend_html <- paste0(
-        "<div style='background:white; padding:10px; border-radius:5px; box-shadow:2px 2px 6px rgba(0,0,0,0.3);'><strong>Life Stages</strong><br>",
-        paste0(
-          "<div style='margin-bottom:4px;'><span style='display:inline-block; width:12px; height:12px; background:",
-          stage_colors[input$lifestages],
-          "; margin-right:6px;'></span>",
-          lifestage_labels[input$lifestages],
-          "</div>", collapse = ""
-        ),
-        "</div>"
-      )
-      proxy %>% addControl(html = legend_html, position = "topright", layerId = "legend")
-    }
+    showModal(modalDialog(
+      title = paste("Layer Descriptions for", input$selected_species),
+      tagList(
+        tags$p("EFH polygons are visualized by species and life stage."),
+        tags$p("Below are the habitat attributes associated with each life stage broken out by eco-region and coastal zone:"),
+        HTML(info_html)      ),
+      easyClose = TRUE,
+      footer = NULL
+    ))
   })
 }
 
-# --- Run App ---
 shinyApp(ui, server)
 
+## sometimes glitch when loading the map 

@@ -193,6 +193,8 @@ library(tmap)
    ) ##no shapefile_name for those species lifestage that do not have data to inform
  View(species_habitat_clean)
  
+ write.csv(species_habitat_clean, "species_habitat_clean.csv", row.names = FALSE)
+ 
  #################### QA/QC: Identify missing shapefiles ######################
  
  available_shapes <- names(shapefile_list)
@@ -714,8 +716,8 @@ message("✅ All Gag Grouper PNGs saved using viridis colors.")
  
  ############### Rshiny using feature layers - URL derived from ArcGIS ############
 
-# Load EFH URL data
-URL_dir <- read.csv("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/species_habitatmap_url.csv", stringsAsFactors = FALSE)
+# Load EFH URL dis data
+URL_dir <- read.csv("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/species_habitatmap_url_dis.csv", stringsAsFactors = FALSE)
 View(URL_dir)
 
 # Life stage codes used in data
