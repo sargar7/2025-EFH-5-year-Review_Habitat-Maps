@@ -30,7 +30,7 @@ function(input, output, session) {
       clearShapes() %>%
       clearControls()
     
-    species_code <- names(species_labels)[species_labels == input$selected_species]
+    species_code <- input$selected_species
     selected_stages <- input$selected_stages
     
     for (stage in lifestages) {
@@ -72,7 +72,7 @@ function(input, output, session) {
   observeEvent(input$layer_info, {
     req(input$selected_species)
     
-    species_code <- names(species_labels)[species_labels == input$selected_species]
+    species_code <- input$selected_species
     
     info_filtered <- polygon_layer_data %>%
       filter(species == species_code, lifestage %in% lifestages) %>%

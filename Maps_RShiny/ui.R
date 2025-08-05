@@ -10,7 +10,7 @@ fluidPage(
   ")),
   introjsUI(),
   
-  titlePanel("Gulf of Mexico - EFH Habitat Maps"),
+  titlePanel("Gulf Council EFH 5-year Review Habitat Maps"),
   sidebarLayout(
     sidebarPanel(
       tags$h4("Project Overview"),
@@ -21,7 +21,7 @@ fluidPage(
       br(), br(),
       
       div(id = "species_box",
-          selectInput("selected_species", "Select Species:", choices = species_labels)
+          selectInput("selected_species", "Select Species:", choices = species_dirs)
       ),
       checkboxGroupInput("selected_stages", "Select Life Stages to Display:",
                          choices = lifestage_labels,

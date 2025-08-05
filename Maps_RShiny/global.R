@@ -20,12 +20,13 @@ library(shiny)
 ## modify directory, but rds files can be found in GOM onedrive
 ## All gulf Council staff should be able to access and run the app
 ## need to move polygon layer data csv file 
+getwd()
 
 #Load polygon layer data csv file 
-polygon_layer_data <-read.csv("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/species_habitat_clean.csv", stringsAsFactors = FALSE)
+polygon_layer_data <-read.csv("species_habitat_clean.csv", stringsAsFactors = FALSE)
 
 #Load EFH RDS data 
-rds_base_dir <- "C:/Users/Sarah/GOM/Gulf of Mexico - Documents/EFH/EFH Generic Amendment 5/SHP_species_maps/RDS_simplified"
+rds_base_dir <- "RDS_simplified"
 
 # Life stages and labels
 lifestage_labels <- c(
@@ -53,6 +54,7 @@ rds_files <- setNames(lapply(species_dirs, function(species) {
     }
   }), lifestages)
 }), species_dirs)
+
 
 stage_colors <- setNames(brewer.pal(length(lifestages), "Dark2"), lifestages)
 
