@@ -17,10 +17,11 @@ function(input, output, session) {
   # Render the map with Esri basemap
   output$habitat_map <- renderLeaflet({
     leaflet() %>%
+      
+      #basemap
       leaflet.esri::addEsriBasemapLayer("Imagery") %>%
       fitBounds(gulf_bounds$lng1, gulf_bounds$lat1, gulf_bounds$lng2, gulf_bounds$lat2)
-  })
-  
+})
   # Add EFH polygons and legend
   
   observe({
