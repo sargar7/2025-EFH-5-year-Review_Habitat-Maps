@@ -17,12 +17,9 @@ library(leafgl)
 library(rintrojs)
 library(shiny)
 
-## modify directory, but rds files can be found in GOM onedrive
+
 ## All gulf Council staff should be able to access and run the app
-
-setwd("C:/Users/Sarah/Documents/GitHub/2025-EFH-5-year-Review_Habitat-Maps/Maps_RShiny")
-getwd()  # confirm current working directory
-
+## R code is : Gulf of Mexico - Documents\EFH\EFH Generic Amendment 5\000_RShiny App Code\Maps_RShiny (2).zip\Maps_RShiny
 
 #Load polygon layer data csv file 
 polygon_layer_data <-read.csv("species_habitat_clean_pretty.csv", stringsAsFactors = FALSE)
@@ -97,7 +94,11 @@ zone_sf <- setNames(lapply(zone_choices, function(z) {
 
 zone_colors <- setNames(c("lightblue", "yellow", "violet"), zone_choices)
 
-# species_pretty = display name, species_code = folder name / rds prefix
+# -------------------------------------------------------------------
+# Lookup maps for pretty names
+# -------------------------------------------------------------------
+
+##species
 species_lookup <- c(
   "Almaco Jack" = "almacojack",
   "Banded Rudderfish" = "bandedrudderfish",
@@ -138,6 +139,35 @@ species_lookup <- c(
   "Yellowtail Snapper" = "yellowtailsnapper"
 )
 
+# Habitat type pretty names
+habitat_map <- c(
+  "em" = "Emergent Marsh",
+  "hb" = "Hard Bottom",
+  "mangrove" = "Mangrove",
+  "oyster" = "Oyster Reef",
+  "reef" = "Reef",
+  "sand" = "Sand",
+  "sav" = "SAV",
+  "sb" = "Soft Bottom",
+  "shelf" = "Shelf/Slope Edge",
+  "wca" = "WCA"
+)
+
+# Zone pretty names
+zone_map <- c(
+  "est" = "Estuarine",
+  "near" = "Nearshore",
+  "off"  = "Offshore"
+)
+
+# Eco-region pretty names
+er_map <- c(
+  "er1"= "ER1",
+  "er2"= "ER2",
+  "er3"= "ER3",
+  "er4"= "ER4",
+  "er5"= "ER5"
+)
 
 # Gulf bounds
 gulf_bounds <- list(lng1 = -98, lat1 = 23, lng2 = -81, lat2 = 34)

@@ -159,60 +159,59 @@ function(input, output, session) {
     }
   })
   
-  
+ 
   # Show Layer Info Modal with simplified ER ranges
   observeEvent(input$layer_info, {
     req(input$selected_species)
     
     species_code <- input$selected_species
     
-    # Filter to selected species and lifestages
     info_filtered <- polygon_layer_data %>%
       filter(species == species_code, lifestage %in% lifestages) %>%
       select(lifestage, habitatzone, habitattype, ecoregion) %>%
       distinct()
     
-    # Define ordering for zones
-    zone_order <- c("est" = 1, "near" = 2, "off" = 3)
-    
-    # For each lifestage, generate simplified pretty_names
     info_html <- paste(
       sapply(lifestages, function(ls) {
         df_stage <- info_filtered %>% filter(lifestage == ls)
         
-        if(nrow(df_stage) == 0) {
+        if (nrow(df_stage) == 0) {
           return(paste0("<b>", lifestage_labels[[ls]], ":</b> No information is available"))
         }
         
-        # Map to pretty names and replace NA with message
         df_stage <- df_stage %>%
           mutate(
-            habitat_pretty = ifelse(is.na(habitat_map[habitattype]), "No information is available", habitat_map[habitattype]),
-            zone_pretty    = ifelse(is.na(zone_map[habitatzone]), "No information is available", zone_map[habitatzone]),
-            er_pretty      = ifelse(is.na(er_map[ecoregion]), "No information is available", er_map[ecoregion])
+            habitat_pretty = recode(tolower(habitattype), !!!habitat_map, .default = "No information is available"),
+            zone_pretty    = recode(tolower(habitatzone), !!!zone_map, .default = "No information is available"),
+            er_pretty      = recode(tolower(ecoregion), !!!er_map, .default = "No information is available")
           )
         
-        # Group by zone + habitat type and summarize ER ranges
-        simplified <- df_stage %>%
-          group_by(zone_pretty, habitat_pretty, habitatzone) %>%
-          summarise(
-            er_range = if (n() > 1) paste0(min(er_pretty), "-", max(er_pretty)) else unique(er_pretty),
-            .groups = "drop"
-          ) %>%
-          arrange(factor(habitatzone, levels = names(zone_order)), habitat_pretty)
-        
-        # If all entries are "No information is available", show single message
-        if(all(simplified$zone_pretty == "No information is available")) {
+        # If everything came back as "No information..."
+        if (all(df_stage$habitat_pretty == "No information is available" &
+                df_stage$zone_pretty == "No information is available" &
+                df_stage$er_pretty == "No information is available")) {
           return(paste0("<b>", lifestage_labels[[ls]], ":</b> No information is available"))
         }
         
-        # Combine into single string per lifestage
-        paste0("<b>", lifestage_labels[[ls]], ":</b> ", paste(simplified$zone_pretty, simplified$habitat_pretty, simplified$er_range, collapse = ", "))
+        simplified <- df_stage %>%
+          group_by(zone_pretty, habitat_pretty) %>%
+          summarise(
+            er_range = if (n_distinct(er_pretty) > 1) {
+              paste0(min(er_pretty), "–", max(er_pretty))
+            } else {
+              unique(er_pretty)
+            },
+            .groups = "drop"
+          )
+        
+        paste0(
+          "<b>", lifestage_labels[[ls]], ":</b> ",
+          paste(simplified$zone_pretty, simplified$habitat_pretty, simplified$er_range, collapse = ", ")
+        )
       }),
       collapse = "<br><br>"
     )
     
-    # Show modal
     showModal(modalDialog(
       title = paste("Layer Descriptions for", input$selected_species),
       tagList(
