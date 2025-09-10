@@ -20,13 +20,33 @@ fluidPage(
       actionButton("layer_info", "Layer Info", class = "btn-info"),
       br(), br(),
       
+      # Habitat Type Dropdown
+      div(id = "habitat_box",
+          selectInput(
+            "selected_habitat",
+            label = "Select Habitat Type:",
+            choices = c("None" ="None",habitat_choices), #none as default 
+            selected = "None"
+          ),
+      ),
+      # Habitat Zone Dropdown 
+      div(id = "zone_box",
+          selectInput(
+            "selected_zone",
+            label = "Select Habitat Zone:",
+            choices = c("None" = "None", names(zone_choices)),
+            selected = "None"
+          )
+      ),
+      
+      #Species dropdown remains below habitat
       div(id = "species_box",
-          selectInput("selected_species", "Select Species:", choices = species_dirs)
+          selectInput("selected_species", "Select Species:", choices = species_lookup, selected=NULL)
       ),
       checkboxGroupInput("selected_stages", "Select Life Stages to Display:",
                          choices = lifestage_labels,
                          selected = lifestage_labels),
-      
+     
       tags$div("Data updated: July 2025", style = "font-size:80%; color:grey;")
     ),
     mainPanel(
@@ -34,3 +54,5 @@ fluidPage(
     )
   )
 )
+      
+   
