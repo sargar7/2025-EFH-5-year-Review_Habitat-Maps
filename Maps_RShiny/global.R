@@ -5,7 +5,7 @@ library(tidyr)
 library(dplyr)
 library(leaflet)
 library(viridisLite)
-library(RColorBrewer) #lifestage color convention
+library(RColorBrewer) #lifestage, habitattype color convention
 library(shiny)
 library(leaflet.esri)
 library(shinydashboard)
@@ -16,7 +16,8 @@ library(shinycssloaders)
 library(leafgl)
 library(rintrojs)
 library(shiny)
-
+library(mapview)
+library(webshot2)
 
 ## All gulf Council staff should be able to access and run the app
 ## R code is : Gulf of Mexico - Documents\EFH\EFH Generic Amendment 5\000_RShiny App Code\Maps_RShiny (2).zip\Maps_RShiny
@@ -93,6 +94,13 @@ zone_sf <- setNames(lapply(zone_choices, function(z) {
 }), zone_choices)
 
 zone_colors <- setNames(c("lightblue", "yellow", "violet"), zone_choices)
+
+
+# Define fixed color palette for all habitat types
+
+# Use "Paired" palette for habitat types
+habitat_palette <- brewer.pal(10, "Paired")  # 10 colors for 10 habitat types
+names(habitat_palette) <- names(habitat_choices)  # assign names
 
 # -------------------------------------------------------------------
 # Lookup maps for pretty names

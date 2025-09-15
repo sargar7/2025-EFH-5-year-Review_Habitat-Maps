@@ -25,17 +25,20 @@ fluidPage(
           selectInput(
             "selected_habitat",
             label = "Select Habitat Type:",
-            choices = c("None" ="None",habitat_choices), #none as default 
-            selected = "None"
-          ),
+            choices = habitat_choices,  # 
+            selected = NULL,            # nothing selected by default
+            multiple = TRUE
+          )
       ),
+      
       # Habitat Zone Dropdown 
       div(id = "zone_box",
           selectInput(
             "selected_zone",
             label = "Select Habitat Zone:",
-            choices = c("None" = "None", names(zone_choices)),
-            selected = "None"
+            choices = names(zone_choices),  # only real zones
+            selected = NULL,                # nothing selected by default
+            multiple = TRUE                 # allow multiple selections
           )
       ),
       
@@ -45,7 +48,7 @@ fluidPage(
       ),
       checkboxGroupInput("selected_stages", "Select Life Stages to Display:",
                          choices = lifestage_labels,
-                         selected = lifestage_labels),
+                         selected = "Adult"),
      
       tags$div("Data updated: July 2025", style = "font-size:80%; color:grey;")
     ),
@@ -54,5 +57,8 @@ fluidPage(
     )
   )
 )
+
+
+
       
    

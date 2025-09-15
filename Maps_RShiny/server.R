@@ -6,8 +6,8 @@ function(input, output, session) {
     introjs(session, options = list(steps = data.frame(
       element = c("#habitat_box","#zone_box", "#species_box", "#habitat_map", "#layer_info"),  
       intro = c(
-        "Use the dropdown to explore habitat type polygons on the map.", 
-        "Use the dropdown to explore habitat zone polygons on the map.",
+        "Use the dropdown to select habitat type(s) polygons on the map.", 
+        "Use the dropdown to select habitat zone(s) polygons on the map.",
         "Use the dropdown to explore EFH layers for each species.",
         "The map displays EFH polygons by selected life stages or habitat type.", 
         "Click 'Layer Info' to view descriptions of each map layer."
@@ -18,12 +18,15 @@ function(input, output, session) {
   
   # Render the map with Esri basemap
   output$habitat_map <- renderLeaflet({
-    leaflet() %>%
-      
-      #basemap
+    leaflet(options = leafletOptions(attributionControl = FALSE)) %>%  # disable attribution bar
       leaflet.esri::addEsriBasemapLayer("Imagery") %>%
-      fitBounds(gulf_bounds$lng1, gulf_bounds$lat1, gulf_bounds$lng2, gulf_bounds$lat2)
-})
+      fitBounds(gulf_bounds$lng1, gulf_bounds$lat1, gulf_bounds$lng2, gulf_bounds$lat2) %>%
+      addControl(
+        html = "<img src='Logo_color.jpg' style='width:120px; opacity:0.8;'>",
+        position = "bottomleft"
+      )
+  })
+
   # Habitat Type Info Modal
   observeEvent(input$habitat_info, {
     req(input$selected_habitat)
@@ -40,36 +43,53 @@ function(input, output, session) {
     ))
   })
   
-  # Render selected habitat type polygons
+  ### Render selected habitat types (dropdown)
   observe({
-    selected_code <- input$selected_habitat
+    selected_habitats <- input$selected_habitat  # may be multiple
     
-    # Clear previous Habitat Type layer
-    leafletProxy("habitat_map") %>% clearGroup("Habitat Type") %>% removeControl("habitat_legend")
+    # Clear previous Habitat Type layer and legend
+    leafletProxy("habitat_map") %>%
+      clearGroup("Habitat Type") %>%
+      removeControl(layerId = "habitat_legend")
     
-    # Only add polygons if a real habitat type is selected
-    if (!is.null(selected_code) && selected_code != "None" && selected_code %in% names(habitat_sf)) {
-      data <- habitat_sf[[selected_code]]
+    if (length(selected_habitats) > 0) {
+      # Loop through selected habitats and add polygons
+      for (habitat_code in selected_habitats) {
+        
+        habitat_data <- habitat_sf[[habitat_code]]
+        
+        # Map code to pretty name
+        habitat_name <- names(habitat_choices)[habitat_choices == habitat_code][1]
+        
+        # Look up color as a plain string, not a named vector
+        habitat_color <- as.character(habitat_palette[habitat_name])
+        
+        if (!is.null(habitat_data)) {
+          leafletProxy("habitat_map") %>%
+            addPolygons(
+              data = habitat_data,
+              color = habitat_color,      # stroke color
+              weight = 2,
+              opacity = 1,
+              fillOpacity = 0.5,
+              fillColor = habitat_color,  # fill color must match stroke
+              group = "Habitat Type",
+              label = habitat_name
+            )
+        }
+      }
       
-      # Lookup pretty name from your habitat_choices vector
-      legend_label <- names(habitat_choices)[habitat_choices == selected_code]  
+      # Add legend in the same order as selected
+      legend_labels <- sapply(selected_habitats, function(code) names(habitat_choices)[habitat_choices == code][1])
+      legend_colors <- as.character(habitat_palette[legend_labels])  # ensure plain vector
       
       leafletProxy("habitat_map") %>%
-        addPolygons(
-          data = data,
-          color = "blue",
-          weight = 2,
-          opacity = 1,
-          fillOpacity = 0.5,
-          group = "Habitat Type",
-          label = legend_label
-        ) %>%
         addLegend(
           position = "topright",
-          colors = "blue",
-          labels = legend_label,
+          colors = legend_colors,
+          labels = legend_labels,
           title = "Habitat Type",
-          layerId = "habitat_legend"   #  independent legend for habitat
+          layerId = "habitat_legend"
         )
     }
   })
@@ -111,54 +131,65 @@ function(input, output, session) {
         lifestage_labels %in% selected_stages
     ]
     
+    species_name <- names(species_lookup)[species_lookup == species_code]
+    
     if (length(visible_stages) > 0) {
       leafletProxy("habitat_map") %>%
         addLegend(
           position = "topright",
           colors = stage_colors[visible_stages],
           labels = lifestage_labels[visible_stages],
-          title = "Life Stage",
+          title = species_name,
           layerId = "lifestage_legend"   # *** ensures legend can be cleared independently
         )
     }
   })
   
-  ###  Render selected habitat zones
-  ###  Render selected habitat zone (dropdown)
+
+  ### Render selected habitat zone (dropdown or checkboxes)
   observe({
-    selected_zone <- input$selected_zone  # single value
+    selected_zones <- input$selected_zone  # may be multiple
+    
+    #define fixed order for legend
+    zone_order <- c("Estuarine", "Nearshore", "Offshore")
+    
+    #reorder selected zones according to fixed order
+    ordered_zones <- zone_order[zone_order %in% selected_zones]
     
     # Clear previous Habitat Zone layer
     leafletProxy("habitat_map") %>%
       clearGroup("Habitat Zone") %>%
       removeControl(layerId = "zone_legend")
     
-    # Only add layer if a real zone is selected
-    if (!is.null(selected_zone) && selected_zone != "None") {
-      zone_key <- tolower(selected_zone)
-      zone_data <- zone_sf[[zone_key]]
-      
-      if (!is.null(zone_data)) {
-        leafletProxy("habitat_map") %>%
-          addPolylines(                  # draw as line
-            data = st_boundary(zone_data),
-            color = zone_colors[[zone_key]],
-            weight = 2,
-            opacity = 1,
-            group = "Habitat Zone",
-            label = selected_zone
-          ) %>%
-          addLegend(
-            position = "topright",
-            colors = zone_colors[[zone_key]],
-            labels = selected_zone,
-            title = "Habitat Zone",
-            layerId = "zone_legend"
-          )
+    if (length(ordered_zones) > 0) {
+      # NEW: loop through zones instead of assuming a single one
+      for (zone in ordered_zones) {
+        zone_key <- tolower(zone)
+        zone_data <- zone_sf[[zone_key]]
+        
+        if (!is.null(zone_data)) {
+          leafletProxy("habitat_map") %>%
+            addPolylines(
+              data = st_boundary(zone_data),
+              color = zone_colors[[zone_key]],
+              weight = 2,
+              opacity = 1,
+              group = "Habitat Zone",
+              label = zone
+            )
+        }
       }
+      
+      leafletProxy("habitat_map") %>%
+        addLegend(
+          position = "topright",
+          colors = unname(zone_colors[tolower(ordered_zones)]),
+          labels = ordered_zones,
+          title = "Habitat Zone",
+          layerId = "zone_legend"
+        )
     }
   })
-  
  
   # Show Layer Info Modal with simplified ER ranges
   observeEvent(input$layer_info, {
@@ -223,5 +254,6 @@ function(input, output, session) {
       footer = NULL
     ))
   })
-}
+  
+  }
   
