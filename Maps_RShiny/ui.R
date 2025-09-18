@@ -17,7 +17,8 @@ fluidPage(
       tags$p("This app allows users to explore EFH polygons for managed species by life stage."),
       
       actionButton("start_tour", "Take Tour", class = "btn-primary"),
-      actionButton("layer_info", "Layer Info", class = "btn-info"),
+      actionButton("efh_descriptions", "EFH Descriptions", class = "btn-info"),
+      actionButton("artificial_reef", "Artificial Reef", class = "btn-warning"),
       br(), br(),
       
       # Habitat Type Dropdown

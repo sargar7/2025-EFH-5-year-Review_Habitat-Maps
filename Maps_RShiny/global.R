@@ -18,6 +18,8 @@ library(rintrojs)
 library(shiny)
 library(mapview)
 library(webshot2)
+library(Polychrome)
+
 
 ## All gulf Council staff should be able to access and run the app
 ## R code is : Gulf of Mexico - Documents\EFH\EFH Generic Amendment 5\000_RShiny App Code\Maps_RShiny (2).zip\Maps_RShiny
@@ -25,8 +27,12 @@ library(webshot2)
 #Load polygon layer data csv file 
 polygon_layer_data <-read.csv("species_habitat_clean_pretty.csv", stringsAsFactors = FALSE)
 
+# Remove unwanted combinations: Offshore + Mangrove or Emergent Marsh
+polygon_layer_data <- polygon_layer_data %>%
+  filter(!(habitatzone == "off" & habitattype %in% c("mangrove", "em", "sav")))
+
 #Load EFH RDS data 
-rds_base_dir <- "RDS_simplified"
+rds_base_dir <- "RDS_Species_Compressed"
 
 # Life stages and labels
 lifestage_labels <- c(
@@ -97,10 +103,22 @@ zone_colors <- setNames(c("lightblue", "yellow", "violet"), zone_choices)
 
 
 # Define fixed color palette for all habitat types
+# Fixed EFH Habitat Type palette (high contrast, no blues)
+# Fixed EFH Habitat Type palette (pastel + high contrast, no blues)
+habitat_palette <- c(
+  "Emergent Marsh"               = "#FBB4AE", # pastel red/pink
+  "Hard Bottom"                  = "#FDB462", # pastel orange
+  "Mangrove"                     = "#FFFFB3", # pastel yellow
+  "Oyster Reef"                  = "#B3DE69", # pastel green
+  "Reef"                         = "#CAB2D6", # pastel purple
+  "Sand"                         = "#FCCDE5", # pastel pink
+  "Submerged Aquatic Vegetation" = "#CCEBC5", # mint green
+  "Soft Bottom"                  = "#E5C494", # tan/beige
+  "Shelf/Slope Edge"             = "#FFED6F", # bright pastel yellow
+  "Water Column Associated"      = "#BC80BD"  # pastel magenta/purple
+)
 
-# Use "Paired" palette for habitat types
-habitat_palette <- brewer.pal(10, "Paired")  # 10 colors for 10 habitat types
-names(habitat_palette) <- names(habitat_choices)  # assign names
+
 
 # -------------------------------------------------------------------
 # Lookup maps for pretty names

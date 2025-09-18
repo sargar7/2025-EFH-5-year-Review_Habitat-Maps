@@ -4,15 +4,16 @@ function(input, output, session) {
   # Start Tour
   observeEvent(input$start_tour, {
     introjs(session, options = list(steps = data.frame(
-      element = c("#habitat_box","#zone_box", "#species_box", "#habitat_map", "#layer_info"),  
+      element = c("#habitat_box","#zone_box", "#species_box", "#habitat_map", "#efh_descriptions","#artificial_reef"),  
       intro = c(
         "Use the dropdown to select habitat type(s) polygons on the map.", 
         "Use the dropdown to select habitat zone(s) polygons on the map.",
         "Use the dropdown to explore EFH layers for each species.",
         "The map displays EFH polygons by selected life stages or habitat type.", 
-        "Click 'Layer Info' to view descriptions of each map layer."
+        "Click to view habitat type descriptions for each species lifestage",
+        "Click to learn more about Artifical Reef Habitat."
       ),
-      position = c("bottom","bottom", "bottom", "top", "top")  # positions for tooltips
+      position = c("bottom","bottom", "bottom", "top", "top", "bottom")  # positions for tooltips
     )))
   })
   
@@ -24,7 +25,29 @@ function(input, output, session) {
       addControl(
         html = "<img src='Logo_color.jpg' style='width:120px; opacity:0.8;'>",
         position = "bottomleft"
+      ) %>%
+    
+    #Add Gulf of America label
+    addLabelOnlyMarkers(
+      lng = -90, lat = 25,
+      label = "Gulf of America",
+      labelOptions = labelOptions(
+        noHide = TRUE,
+        textOnly = TRUE,
+        direction = "top",
+        style = list(
+          "color" = "white",
+          "font-size" = "12px",
+          "font-style" = "italic"
       )
+    )
+  ) %>%
+    
+  # Add scale bar in miles
+    addScaleBar(
+      position = "bottomright",
+      options = scaleBarOptions(imperial = TRUE, metric = FALSE, updateWhenIdle = TRUE)
+    )
   })
 
   # Habitat Type Info Modal
@@ -69,9 +92,9 @@ function(input, output, session) {
             addPolygons(
               data = habitat_data,
               color = habitat_color,      # stroke color
-              weight = 2,
+              weight = 0,
               opacity = 1,
-              fillOpacity = 0.5,
+              fillOpacity = 1,
               fillColor = habitat_color,  # fill color must match stroke
               group = "Habitat Type",
               label = habitat_name
@@ -116,7 +139,7 @@ function(input, output, session) {
           addPolygons(
             data = stage_data,
             color = stage_colors[[stage]],
-            weight = 2,
+            weight = 0,
             opacity = 1,
             fillOpacity = 0.8,
             group = "Life Stage",      # group separate from Habitat Type
@@ -192,7 +215,7 @@ function(input, output, session) {
   })
  
   # Show Layer Info Modal with simplified ER ranges
-  observeEvent(input$layer_info, {
+  observeEvent(input$efh_descriptions, {
     req(input$selected_species)
     
     species_code <- input$selected_species
@@ -242,13 +265,47 @@ function(input, output, session) {
       }),
       collapse = "<br><br>"
     )
-    
+
     showModal(modalDialog(
-      title = paste("Layer Descriptions for", input$selected_species),
+      title = paste("Habitat Layer Descriptions for", input$selected_species),
       tagList(
         tags$p("EFH polygons are visualized by species and life stage."),
         tags$p("Below are the habitat attributes associated with each life stage broken out by eco-region and coastal zone:"),
-        HTML(info_html)
+        HTML(info_html),
+        tags$hr(),
+        tags$p(
+          "Updated Metadata are provided through Council contracted work completed in 2023/2024, available ",
+          tags$a(href = "https://drive.google.com/drive/folders/1qx9lop8Wgq2YAcrRIYJ-kR-YH9KWSdtF?usp=sharing", 
+                 target = "_blank", "here"),
+          "."
+        )
+      ),
+      easyClose = TRUE,
+      footer = NULL
+    ))
+      })
+  observeEvent(input$artificial_reef, {
+    showModal(modalDialog(
+      title = "Artificial Reefs",
+      tagList(
+        tags$p(
+          "Artificial reefs are human-made structures placed on the seafloor to mimic natural reef habitats. 
+In the Gulf, two types of artificial reefs are recognized: 1) structures intentionally placed as artificial reefs, 
+and 2) structures such as oil and gas platforms that are intended for other purposes but do provide fish habitat. 
+Petroleum platforms have been in place since the 1940s. A variety of other structures in the Gulf also serve as artificial reefs, 
+including pipelines and sunken vessels. They can enhance local fisheries by aggregating fish and supporting biodiversity 
+in areas where natural reefs are sparse."
+        ),
+        tags$p(
+          "Gulf Council and EFH Considerations: The Gulf Council currently does not manage artificial reefs as Essential Fish Habitat (EFH). 
+Artificial reefs were considered for management in 2013. As a result, the Council determined that artificial reefs 
+do not fall under the current EFH criteria."
+        ),
+        tags$p(
+          "The NOAA Fisheries Service currently consults with the Bureau of Ocean Energy Management (BOEM) 
+and Bureau of Safety and Environmental Enforcement (BSEE) programmatically on the installation and removal 
+of oil and gas structures in the Gulf."
+        )
       ),
       easyClose = TRUE,
       footer = NULL
