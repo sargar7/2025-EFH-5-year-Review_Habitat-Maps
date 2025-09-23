@@ -45,13 +45,22 @@ fluidPage(
       
       #Species dropdown remains below habitat
       div(id = "species_box",
-          selectInput("selected_species", "Select Species:", choices = species_lookup, selected=NULL)
+          selectInput(
+            "selected_species",
+            "Select Species:",
+            choices = c("None" = "", species_lookup),   
+            selected = "",                              ## default to None
+            multiple = FALSE
+          )
       ),
+      
+      
       checkboxGroupInput("selected_stages", "Select Life Stages to Display:",
                          choices = lifestage_labels,
                          selected = "Adult"),
-     
-      tags$div("Data updated: July 2025", style = "font-size:80%; color:grey;")
+      
+      tags$div("Data updated: 2024", style = "font-size:80%; color:grey;"),
+      tags$div("Contact sarah.gardiner@gulfcouncil.org for more information", style="font-size:80%; color:grey;")
     ),
     mainPanel(
       leafletOutput("habitat_map", height = "90vh") %>% withSpinner(color = "#2C3E50")

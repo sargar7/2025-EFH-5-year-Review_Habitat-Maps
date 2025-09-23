@@ -1,6 +1,7 @@
 #server.r
 
 function(input, output, session) {
+  
   # Start Tour
   observeEvent(input$start_tour, {
     introjs(session, options = list(steps = data.frame(
@@ -13,47 +14,28 @@ function(input, output, session) {
         "Click to view habitat type descriptions for each species lifestage",
         "Click to learn more about Artifical Reef Habitat."
       ),
-      position = c("bottom","bottom", "bottom", "top", "top", "bottom")  # positions for tooltips
+      position = c("bottom","bottom", "bottom", "top", "top", "bottom")
     )))
   })
   
-  # Render the map with Esri basemap
+  # Render base map
   output$habitat_map <- renderLeaflet({
-    leaflet(options = leafletOptions(attributionControl = FALSE)) %>%  # disable attribution bar
+    leaflet(options = leafletOptions(attributionControl = FALSE)) %>%
       leaflet.esri::addEsriBasemapLayer("Imagery") %>%
       fitBounds(gulf_bounds$lng1, gulf_bounds$lat1, gulf_bounds$lng2, gulf_bounds$lat2) %>%
-      addControl(
-        html = "<img src='Logo_color.jpg' style='width:120px; opacity:0.8;'>",
-        position = "bottomleft"
+      addControl(html = "<img src='Logo_color.jpg' style='width:120px; opacity:0.8;'>", position = "bottomleft") %>%
+      addLabelOnlyMarkers(
+        lng = -90, lat = 25,
+        label = "Gulf of America",
+        labelOptions = labelOptions(noHide = TRUE, textOnly = TRUE, direction = "top",
+                                    style = list("color" = "white", "font-size" = "12px", "font-style" = "italic"))
       ) %>%
-    
-    #Add Gulf of America label
-    addLabelOnlyMarkers(
-      lng = -90, lat = 25,
-      label = "Gulf of America",
-      labelOptions = labelOptions(
-        noHide = TRUE,
-        textOnly = TRUE,
-        direction = "top",
-        style = list(
-          "color" = "white",
-          "font-size" = "12px",
-          "font-style" = "italic"
-      )
-    )
-  ) %>%
-    
-  # Add scale bar in miles
-    addScaleBar(
-      position = "bottomright",
-      options = scaleBarOptions(imperial = TRUE, metric = FALSE, updateWhenIdle = TRUE)
-    )
+      addScaleBar(position = "bottomright", options = scaleBarOptions(imperial = TRUE, metric = FALSE, updateWhenIdle = TRUE))
   })
-
+  
   # Habitat Type Info Modal
   observeEvent(input$habitat_info, {
     req(input$selected_habitat)
-    
     showModal(modalDialog(
       title = "Habitat Type Info",
       tagList(
@@ -61,50 +43,39 @@ function(input, output, session) {
         tags$p("These habitat type maps were used to create species-specific EFH maps."),
         tags$p(paste("Currently selected habitat type:", input$selected_habitat))
       ),
-      easyClose = TRUE,
-      footer = NULL
+      easyClose = TRUE, footer = NULL
     ))
   })
   
-  ### Render selected habitat types (dropdown)
+  # Render selected habitat types
   observe({
-    selected_habitats <- input$selected_habitat  # may be multiple
-    
-    # Clear previous Habitat Type layer and legend
+    selected_habitats <- input$selected_habitat
     leafletProxy("habitat_map") %>%
       clearGroup("Habitat Type") %>%
       removeControl(layerId = "habitat_legend")
     
     if (length(selected_habitats) > 0) {
-      # Loop through selected habitats and add polygons
       for (habitat_code in selected_habitats) {
-        
         habitat_data <- habitat_sf[[habitat_code]]
-        
-        # Map code to pretty name
         habitat_name <- names(habitat_choices)[habitat_choices == habitat_code][1]
-        
-        # Look up color as a plain string, not a named vector
         habitat_color <- as.character(habitat_palette[habitat_name])
-        
         if (!is.null(habitat_data)) {
           leafletProxy("habitat_map") %>%
             addPolygons(
               data = habitat_data,
-              color = habitat_color,      # stroke color
+              color = habitat_color,
               weight = 0,
               opacity = 1,
               fillOpacity = 1,
-              fillColor = habitat_color,  # fill color must match stroke
+              fillColor = habitat_color,
               group = "Habitat Type",
               label = habitat_name
             )
         }
       }
       
-      # Add legend in the same order as selected
       legend_labels <- sapply(selected_habitats, function(code) names(habitat_choices)[habitat_choices == code][1])
-      legend_colors <- as.character(habitat_palette[legend_labels])  # ensure plain vector
+      legend_colors <- as.character(habitat_palette[legend_labels])
       
       leafletProxy("habitat_map") %>%
         addLegend(
@@ -117,19 +88,27 @@ function(input, output, session) {
     }
   })
   
-  # Add legend (species/lifestage)
+  ### Render species/lifestage polygons
+  
+  ### # server.r - Species/lifestage polygons with "None" option
   observe({
-    req(input$selected_species)
-    
     species_code <- input$selected_species
     selected_stages <- input$selected_stages
     
-    # Clear only species/lifestage polygons and legend, leave Habitat Type intact
+    # Clear only species/lifestage polygons and legend
     leafletProxy("habitat_map") %>%
       clearGroup("Life Stage") %>%
       removeControl(layerId = "lifestage_legend")
     
-    # Add species/lifestage polygons
+    if (is.null(species_code) || species_code == "") {  ### # CHANGED: None selected
+      # If "None" is selected, reset life stages selection to empty
+      updateCheckboxGroupInput(session, "selected_stages", selected = character(0))  ### # CHANGED
+      return()  # exit early, no polygons rendered
+    }
+    
+    if (!species_code %in% names(rds_files)) return()
+    
+    # If a real species is selected, render polygons
     for (stage in lifestages) {
       label <- lifestage_labels[[stage]]
       stage_data <- rds_files[[species_code]][[stage]]
@@ -142,13 +121,12 @@ function(input, output, session) {
             weight = 0,
             opacity = 1,
             fillOpacity = 0.8,
-            group = "Life Stage",      # group separate from Habitat Type
+            group = "Life Stage",
             label = label
           )
       }
     }
     
-    # Add species/lifestage legend
     visible_stages <- lifestages[
       sapply(rds_files[[species_code]], Negate(is.null)) & 
         lifestage_labels %in% selected_stages
@@ -163,33 +141,26 @@ function(input, output, session) {
           colors = stage_colors[visible_stages],
           labels = lifestage_labels[visible_stages],
           title = species_name,
-          layerId = "lifestage_legend"   # *** ensures legend can be cleared independently
+          layerId = "lifestage_legend"
         )
     }
+    # If "None" is selected, nothing is drawn (polygons cleared above)
   })
   
-
-  ### Render selected habitat zone (dropdown or checkboxes)
+  # Render habitat zones
   observe({
-    selected_zones <- input$selected_zone  # may be multiple
-    
-    #define fixed order for legend
+    selected_zones <- input$selected_zone
     zone_order <- c("Estuarine", "Nearshore", "Offshore")
-    
-    #reorder selected zones according to fixed order
     ordered_zones <- zone_order[zone_order %in% selected_zones]
     
-    # Clear previous Habitat Zone layer
     leafletProxy("habitat_map") %>%
       clearGroup("Habitat Zone") %>%
       removeControl(layerId = "zone_legend")
     
     if (length(ordered_zones) > 0) {
-      # NEW: loop through zones instead of assuming a single one
       for (zone in ordered_zones) {
         zone_key <- tolower(zone)
         zone_data <- zone_sf[[zone_key]]
-        
         if (!is.null(zone_data)) {
           leafletProxy("habitat_map") %>%
             addPolylines(
@@ -213,61 +184,43 @@ function(input, output, session) {
         )
     }
   })
- 
-  # Show Layer Info Modal with simplified ER ranges
+  
+  # EFH Descriptions Modal
   observeEvent(input$efh_descriptions, {
-    req(input$selected_species)
-    
     species_code <- input$selected_species
     
-    info_filtered <- polygon_layer_data %>%
-      filter(species == species_code, lifestage %in% lifestages) %>%
-      select(lifestage, habitatzone, habitattype, ecoregion) %>%
-      distinct()
+    info_html <- if (species_code != "") {
+      info_filtered <- polygon_layer_data %>%
+        filter(species == species_code, lifestage %in% lifestages) %>%
+        select(lifestage, habitatzone, habitattype, ecoregion) %>%
+        distinct()
+      
+      paste(
+        sapply(lifestages, function(ls) {
+          df_stage <- info_filtered %>% filter(lifestage == ls)
+          if (nrow(df_stage) == 0) return(paste0("<b>", lifestage_labels[[ls]], ":</b> No information is available"))
+          df_stage <- df_stage %>%
+            mutate(
+              habitat_pretty = recode(tolower(habitattype), !!!habitat_map, .default = "No information is available"),
+              zone_pretty    = recode(tolower(habitatzone), !!!zone_map, .default = "No information is available"),
+              er_pretty      = recode(tolower(ecoregion), !!!er_map, .default = "No information is available")
+            )
+          simplified <- df_stage %>%
+            group_by(zone_pretty, habitat_pretty) %>%
+            summarise(
+              er_range = if (n_distinct(er_pretty) > 1) paste0(min(er_pretty), "–", max(er_pretty)) else unique(er_pretty),
+              .groups = "drop"
+            )
+          paste0("<b>", lifestage_labels[[ls]], ":</b> ", paste(simplified$zone_pretty, simplified$habitat_pretty, simplified$er_range, collapse = ", "))
+        }),
+        collapse = "<br><br>"
+      )
+    } else {
+      "<b>No species selected.</b>"
+    }
     
-    info_html <- paste(
-      sapply(lifestages, function(ls) {
-        df_stage <- info_filtered %>% filter(lifestage == ls)
-        
-        if (nrow(df_stage) == 0) {
-          return(paste0("<b>", lifestage_labels[[ls]], ":</b> No information is available"))
-        }
-        
-        df_stage <- df_stage %>%
-          mutate(
-            habitat_pretty = recode(tolower(habitattype), !!!habitat_map, .default = "No information is available"),
-            zone_pretty    = recode(tolower(habitatzone), !!!zone_map, .default = "No information is available"),
-            er_pretty      = recode(tolower(ecoregion), !!!er_map, .default = "No information is available")
-          )
-        
-        # If everything came back as "No information..."
-        if (all(df_stage$habitat_pretty == "No information is available" &
-                df_stage$zone_pretty == "No information is available" &
-                df_stage$er_pretty == "No information is available")) {
-          return(paste0("<b>", lifestage_labels[[ls]], ":</b> No information is available"))
-        }
-        
-        simplified <- df_stage %>%
-          group_by(zone_pretty, habitat_pretty) %>%
-          summarise(
-            er_range = if (n_distinct(er_pretty) > 1) {
-              paste0(min(er_pretty), "–", max(er_pretty))
-            } else {
-              unique(er_pretty)
-            },
-            .groups = "drop"
-          )
-        
-        paste0(
-          "<b>", lifestage_labels[[ls]], ":</b> ",
-          paste(simplified$zone_pretty, simplified$habitat_pretty, simplified$er_range, collapse = ", ")
-        )
-      }),
-      collapse = "<br><br>"
-    )
-
     showModal(modalDialog(
-      title = paste("Habitat Layer Descriptions for", input$selected_species),
+      title = paste("Habitat Layer Descriptions for", ifelse(species_code == "", "None", species_code)),
       tagList(
         tags$p("EFH polygons are visualized by species and life stage."),
         tags$p("Below are the habitat attributes associated with each life stage broken out by eco-region and coastal zone:"),
@@ -275,42 +228,52 @@ function(input, output, session) {
         tags$hr(),
         tags$p(
           "Updated Metadata are provided through Council contracted work completed in 2023/2024, available ",
-          tags$a(href = "https://drive.google.com/drive/folders/1qx9lop8Wgq2YAcrRIYJ-kR-YH9KWSdtF?usp=sharing", 
-                 target = "_blank", "here"),
+          tags$a(href = "https://drive.google.com/drive/folders/1qx9lop8Wgq2YAcrRIYJ-kR-YH9KWSdtF?usp=sharing", target = "_blank", "here"),
           "."
         )
       ),
-      easyClose = TRUE,
-      footer = NULL
+      easyClose = TRUE, footer = NULL
     ))
-      })
+  })
+  
+ 
+  # Artificial Reef Modal
   observeEvent(input$artificial_reef, {
     showModal(modalDialog(
       title = "Artificial Reefs",
       tagList(
         tags$p(
           "Artificial reefs are human-made structures placed on the seafloor to mimic natural reef habitats. 
-In the Gulf, two types of artificial reefs are recognized: 1) structures intentionally placed as artificial reefs, 
-and 2) structures such as oil and gas platforms that are intended for other purposes but do provide fish habitat. 
+In the Gulf, two types of artificial reefs are recognized: 
+1) structures intentionally placed as artificial reefs, and 
+2) structures such as oil and gas platforms that are intended for other purposes but do provide fish habitat. 
+
 Petroleum platforms have been in place since the 1940s. A variety of other structures in the Gulf also serve as artificial reefs, 
 including pipelines and sunken vessels. They can enhance local fisheries by aggregating fish and supporting biodiversity 
 in areas where natural reefs are sparse."
         ),
         tags$p(
           "Gulf Council and EFH Considerations: The Gulf Council currently does not manage artificial reefs as Essential Fish Habitat (EFH). 
-Artificial reefs were considered for management in 2013. As a result, the Council determined that artificial reefs 
-do not fall under the current EFH criteria."
+Fixed petroleum platforms and other artificial reef substrates were considered for inclusion as EFH in 2013. 
+At that time, the Council chose not to modify current essential fish habitat type designations."
         ),
         tags$p(
-          "The NOAA Fisheries Service currently consults with the Bureau of Ocean Energy Management (BOEM) 
-and Bureau of Safety and Environmental Enforcement (BSEE) programmatically on the installation and removal 
-of oil and gas structures in the Gulf."
+          "2013 Council Evaluation of Artificial Reef Draft Options Document: ",
+          tags$a(
+            href = "https://gulf-council-media.s3.amazonaws.com/uploads/2025/03/K-5-Artificial-Reefs-as-EFH-Amendment-6-3-2013.pdf",
+            target = "_blank",
+            "View Document"
+          ),
+          "."
+        ),
+        tags$p(
+          "Currently, individual states manage their own artificial reef databases, which can be accessed through their websites."
         )
       ),
       easyClose = TRUE,
       footer = NULL
     ))
   })
-  
-  }
+}
+
   

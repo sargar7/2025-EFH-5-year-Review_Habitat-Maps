@@ -32,7 +32,8 @@ polygon_layer_data <- polygon_layer_data %>%
   filter(!(habitatzone == "off" & habitattype %in% c("mangrove", "em", "sav")))
 
 #Load EFH RDS data 
-rds_base_dir <- "RDS_Species_Compressed"
+rds_base_dir <- "RDS_Species_Habitat_V2"
+
 
 # Life stages and labels
 lifestage_labels <- c(
@@ -52,7 +53,7 @@ species_dirs <- list.dirs(rds_base_dir, recursive = FALSE, full.names = FALSE)
 # Load all RDS files into a nested list: rds_files[[species]][[lifestage]]
 rds_files <- setNames(lapply(species_dirs, function(species) {
   setNames(lapply(lifestages, function(stage) {
-    file_path <- file.path(rds_base_dir, species, paste0(species, "_", stage, "_dissolve.rds"))
+    file_path <- file.path(rds_base_dir, species, paste0(species, "_", stage, ".rds"))
     if (file.exists(file_path)) {
       readRDS(file_path)
     } else {
@@ -60,6 +61,7 @@ rds_files <- setNames(lapply(species_dirs, function(species) {
     }
   }), lifestages)
 }), species_dirs)
+
 
 stage_colors <- setNames(brewer.pal(length(lifestages), "Dark2"), lifestages)
 #################### habitat Type ########################
