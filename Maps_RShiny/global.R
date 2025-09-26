@@ -19,6 +19,8 @@ library(shiny)
 library(mapview)
 library(webshot2)
 library(Polychrome)
+library(shinyWidgets)
+library(shinycssloaders)
 
 
 ## All gulf Council staff should be able to access and run the app

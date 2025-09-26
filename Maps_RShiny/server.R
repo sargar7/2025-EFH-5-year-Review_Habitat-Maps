@@ -47,14 +47,14 @@ function(input, output, session) {
     ))
   })
   
-  # Render selected habitat types
+  ### Render selected habitat types
   observe({
-    selected_habitats <- input$selected_habitat
+    selected_habitats <- input$selected_habitat  ### CHANGED: pickerInput returns NULL if nothing selected
     leafletProxy("habitat_map") %>%
       clearGroup("Habitat Type") %>%
       removeControl(layerId = "habitat_legend")
     
-    if (length(selected_habitats) > 0) {
+    if (!is.null(selected_habitats) && length(selected_habitats) > 0) {  ### CHANGED
       for (habitat_code in selected_habitats) {
         habitat_data <- habitat_sf[[habitat_code]]
         habitat_name <- names(habitat_choices)[habitat_choices == habitat_code][1]
@@ -88,68 +88,9 @@ function(input, output, session) {
     }
   })
   
-  ### Render species/lifestage polygons
-  
-  ### # server.r - Species/lifestage polygons with "None" option
+  ### Render habitat zones
   observe({
-    species_code <- input$selected_species
-    selected_stages <- input$selected_stages
-    
-    # Clear only species/lifestage polygons and legend
-    leafletProxy("habitat_map") %>%
-      clearGroup("Life Stage") %>%
-      removeControl(layerId = "lifestage_legend")
-    
-    if (is.null(species_code) || species_code == "") {  ### # CHANGED: None selected
-      # If "None" is selected, reset life stages selection to empty
-      updateCheckboxGroupInput(session, "selected_stages", selected = character(0))  ### # CHANGED
-      return()  # exit early, no polygons rendered
-    }
-    
-    if (!species_code %in% names(rds_files)) return()
-    
-    # If a real species is selected, render polygons
-    for (stage in lifestages) {
-      label <- lifestage_labels[[stage]]
-      stage_data <- rds_files[[species_code]][[stage]]
-      
-      if (label %in% selected_stages && !is.null(stage_data)) {
-        leafletProxy("habitat_map") %>%
-          addPolygons(
-            data = stage_data,
-            color = stage_colors[[stage]],
-            weight = 0,
-            opacity = 1,
-            fillOpacity = 0.8,
-            group = "Life Stage",
-            label = label
-          )
-      }
-    }
-    
-    visible_stages <- lifestages[
-      sapply(rds_files[[species_code]], Negate(is.null)) & 
-        lifestage_labels %in% selected_stages
-    ]
-    
-    species_name <- names(species_lookup)[species_lookup == species_code]
-    
-    if (length(visible_stages) > 0) {
-      leafletProxy("habitat_map") %>%
-        addLegend(
-          position = "topright",
-          colors = stage_colors[visible_stages],
-          labels = lifestage_labels[visible_stages],
-          title = species_name,
-          layerId = "lifestage_legend"
-        )
-    }
-    # If "None" is selected, nothing is drawn (polygons cleared above)
-  })
-  
-  # Render habitat zones
-  observe({
-    selected_zones <- input$selected_zone
+    selected_zones <- input$selected_zone  ### CHANGED: pickerInput returns NULL if nothing selected
     zone_order <- c("Estuarine", "Nearshore", "Offshore")
     ordered_zones <- zone_order[zone_order %in% selected_zones]
     
@@ -157,7 +98,7 @@ function(input, output, session) {
       clearGroup("Habitat Zone") %>%
       removeControl(layerId = "zone_legend")
     
-    if (length(ordered_zones) > 0) {
+    if (!is.null(selected_zones) && length(ordered_zones) > 0) {  ### CHANGED
       for (zone in ordered_zones) {
         zone_key <- tolower(zone)
         zone_data <- zone_sf[[zone_key]]
@@ -185,40 +126,128 @@ function(input, output, session) {
     }
   })
   
+  ### Render species/lifestage polygons
+  observe({
+    species_code <- input$selected_species  ### CHANGED: pickerInput returns "" if cleared
+    selected_stages <- input$selected_stages
+    
+    leafletProxy("habitat_map") %>%
+      clearGroup("Life Stage") %>%
+      removeControl(layerId = "lifestage_legend")
+    
+    if (is.null(species_code) || species_code == "") {  ### CHANGED: handle cleared selection
+      updateCheckboxGroupInput(session, "selected_stages", selected = character(0))
+      return()
+    }
+    
+    if (!species_code %in% names(rds_files)) return()
+    
+    for (stage in lifestages) {
+      label <- lifestage_labels[[stage]]
+      stage_data <- rds_files[[species_code]][[stage]]
+      
+      if (label %in% selected_stages && !is.null(stage_data)) {
+        leafletProxy("habitat_map") %>%
+          addPolygons(
+            data = stage_data,
+            color = stage_colors[[stage]],
+            weight = 0,
+            opacity = 1,
+            fillOpacity = 0.8,
+            group = "Life Stage",
+            label = label
+          )
+      }
+    }
+    
+    visible_stages <- lifestages[
+      sapply(rds_files[[species_code]], Negate(is.null)) &
+        lifestage_labels %in% selected_stages
+    ]
+    
+    species_name <- names(species_lookup)[species_lookup == species_code]
+    
+    if (length(visible_stages) > 0) {
+      leafletProxy("habitat_map") %>%
+        addLegend(
+          position = "topright",
+          colors = stage_colors[visible_stages],
+          labels = lifestage_labels[visible_stages],
+          title = species_name,
+          layerId = "lifestage_legend"
+        )
+    }
+  })
+  
   # EFH Descriptions Modal
   observeEvent(input$efh_descriptions, {
     species_code <- input$selected_species
     
     info_html <- if (species_code != "") {
+      # Filter polygon_layer_data for selected species and all life stages ### CHANGED
       info_filtered <- polygon_layer_data %>%
         filter(species == species_code, lifestage %in% lifestages) %>%
-        select(lifestage, habitatzone, habitattype, ecoregion) %>%
+        select(lifestage, habitatzone, habitattype, ecoregion, shapefile_name) %>%  ### CHANGED: include shapefile_name if you want to display
         distinct()
       
-      paste(
-        sapply(lifestages, function(ls) {
-          df_stage <- info_filtered %>% filter(lifestage == ls)
-          if (nrow(df_stage) == 0) return(paste0("<b>", lifestage_labels[[ls]], ":</b> No information is available"))
-          df_stage <- df_stage %>%
-            mutate(
-              habitat_pretty = recode(tolower(habitattype), !!!habitat_map, .default = "No information is available"),
-              zone_pretty    = recode(tolower(habitatzone), !!!zone_map, .default = "No information is available"),
-              er_pretty      = recode(tolower(ecoregion), !!!er_map, .default = "No information is available")
-            )
-          simplified <- df_stage %>%
-            group_by(zone_pretty, habitat_pretty) %>%
-            summarise(
-              er_range = if (n_distinct(er_pretty) > 1) paste0(min(er_pretty), "–", max(er_pretty)) else unique(er_pretty),
-              .groups = "drop"
-            )
-          paste0("<b>", lifestage_labels[[ls]], ":</b> ", paste(simplified$zone_pretty, simplified$habitat_pretty, simplified$er_range, collapse = ", "))
-        }),
-        collapse = "<br><br>"
-      )
+      # Helper function to format attributes cleanly
+      format_attributes <- function(habitat_type, habitat_zone, ecoregion) {
+        attrs <- c(
+          ifelse(is.na(habitat_type) | habitat_type == "", NA, habitat_type),
+          ifelse(is.na(habitat_zone)  | habitat_zone == "", NA, habitat_zone),
+          ifelse(is.na(ecoregion)     | ecoregion == "", NA, ecoregion)
+        )
+        if (all(is.na(attrs))) return("No spatial data available")
+        paste(na.omit(attrs), collapse = " ")  # space-separated for clean display ### CHANGED
+      }
+      
+      # Build EFH description per life stage
+      if (nrow(info_filtered) == 0) {
+        "<b>No spatial data available.</b>"  ### # CHANGED: if no data at all
+      } else {
+        paste(
+          sapply(lifestages, function(ls) {
+            df_stage <- info_filtered %>% filter(lifestage == ls)
+            
+            if (nrow(df_stage) == 0) {
+              return(paste0("<b>", lifestage_labels[[ls]], ":</b> No spatial data available"))
+            }
+            
+            # Recode attributes to pretty names ### CHANGED
+            df_stage <- df_stage %>%
+              mutate(
+                habitat_pretty = recode(tolower(habitattype), !!!habitat_map, .default = ""),
+                zone_pretty    = recode(tolower(habitatzone), !!!zone_map, .default = ""),
+                er_pretty      = recode(tolower(ecoregion), !!!er_map, .default = "")
+              )
+            
+            simplified <- df_stage %>%
+              group_by(zone_pretty, habitat_pretty) %>%
+              summarise(
+                er_range = if (n_distinct(er_pretty) > 1) paste0(min(er_pretty), "–", max(er_pretty)) else unique(er_pretty),
+                .groups = "drop"
+              )
+            
+            # Format each row with helper function to avoid repeated "No information" messages
+            stage_text <- sapply(seq_len(nrow(simplified)), function(i) {
+              format_attributes(
+                simplified$habitat_pretty[i],
+                simplified$zone_pretty[i],
+                simplified$er_range[i]
+              )
+            })
+            
+            paste0("<b>", lifestage_labels[[ls]], ":</b> ", paste(stage_text, collapse = "; "))
+          }),
+          collapse = "<br><br>"
+        )
+      }
+      
     } else {
       "<b>No species selected.</b>"
     }
     
+    ### Show modal with cleaned EFH descriptions
     showModal(modalDialog(
       title = paste("Habitat Layer Descriptions for", ifelse(species_code == "", "None", species_code)),
       tagList(
@@ -228,7 +257,10 @@ function(input, output, session) {
         tags$hr(),
         tags$p(
           "Updated Metadata are provided through Council contracted work completed in 2023/2024, available ",
-          tags$a(href = "https://drive.google.com/drive/folders/1qx9lop8Wgq2YAcrRIYJ-kR-YH9KWSdtF?usp=sharing", target = "_blank", "here"),
+          tags$a(
+            href = "https://drive.google.com/drive/folders/1qx9lop8Wgq2YAcrRIYJ-kR-YH9KWSdtF?usp=sharing", 
+            target = "_blank", "here"
+          ),
           "."
         )
       ),
