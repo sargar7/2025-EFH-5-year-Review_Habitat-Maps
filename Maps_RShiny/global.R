@@ -1,5 +1,7 @@
-# Packages 
 
+
+# Packages 
+suppressPackageStartupMessages({
 library(sf)
 library(tidyr)
 library(dplyr)
@@ -21,20 +23,22 @@ library(webshot2)
 library(Polychrome)
 library(shinyWidgets)
 library(shinycssloaders)
+})
+print("✅ global.R loaded successfully")
 
 
 ## All gulf Council staff should be able to access and run the app
 ## R code is : Gulf of Mexico - Documents\EFH\EFH Generic Amendment 5\000_RShiny App Code\Maps_RShiny (2).zip\Maps_RShiny
 
 #Load polygon layer data csv file 
-polygon_layer_data <-read.csv("species_habitat_clean_pretty.csv", stringsAsFactors = FALSE)
+polygon_layer_data <-read.csv("species_habitat_NOWCA_101525.csv", stringsAsFactors = FALSE)
 
 # Remove unwanted combinations: Offshore + Mangrove or Emergent Marsh
 polygon_layer_data <- polygon_layer_data %>%
   filter(!(habitatzone == "off" & habitattype %in% c("mangrove", "em", "sav")))
 
 #Load EFH RDS data 
-rds_base_dir <- "RDS_Species_Habitat_V2"
+rds_base_dir <- "RDS_Species_Habitat_101525_NOWCA"
 
 
 # Life stages and labels
@@ -78,7 +82,7 @@ habitat_codes <- sub("_combined\\.rds$", "", basename(habitat_files))
 
 # Create named list for dropdown choices (pretty name = code)
 habitat_choices <- setNames(habitat_codes, c(
-  "Emergent Marsh","Hard Bottom","Mangrove","Oyster Reef","Reef",
+  "Emergent Marsh","Hard Bottom/Reef","Mangrove","Oyster Reef",
   "Sand","Submerged Aquatic Vegetation","Soft Bottom","Shelf/Slope Edge","Water Column Associated"
 ))
 
@@ -111,10 +115,9 @@ zone_colors <- setNames(c("lightblue", "yellow", "violet"), zone_choices)
 # Fixed EFH Habitat Type palette (pastel + high contrast, no blues)
 habitat_palette <- c(
   "Emergent Marsh"               = "#FBB4AE", # pastel red/pink
-  "Hard Bottom"                  = "#FDB462", # pastel orange
+  "Hard Bottom/Reef"             = "#FDB462", # pastel orange
   "Mangrove"                     = "#FFFFB3", # pastel yellow
   "Oyster Reef"                  = "#B3DE69", # pastel green
-  "Reef"                         = "#CAB2D6", # pastel purple
   "Sand"                         = "#FCCDE5", # pastel pink
   "Submerged Aquatic Vegetation" = "#CCEBC5", # mint green
   "Soft Bottom"                  = "#E5C494", # tan/beige
@@ -172,10 +175,9 @@ species_lookup <- c(
 # Habitat type pretty names
 habitat_map <- c(
   "em" = "Emergent Marsh",
-  "hb" = "Hard Bottom",
+  "hb" = "Hard Bottom/Reef",
   "mangrove" = "Mangrove",
   "oyster" = "Oyster Reef",
-  "reef" = "Reef",
   "sand" = "Sand",
   "sav" = "SAV",
   "sb" = "Soft Bottom",

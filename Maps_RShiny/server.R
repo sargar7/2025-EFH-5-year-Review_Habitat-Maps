@@ -64,7 +64,7 @@ function(input, output, session) {
             addPolygons(
               data = habitat_data,
               color = habitat_color,
-              weight = 0,
+              weight = 1,
               opacity = 1,
               fillOpacity = 1,
               fillColor = habitat_color,

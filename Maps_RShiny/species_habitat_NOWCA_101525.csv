@@ -1,0 +1,1661 @@
+species,lifestage,habitatzone,habitattype,ecoregion,shapefile_name,pretty_name
+almacojack,egg,,,,,
+almacojack,larvae,,,,,
+almacojack,postlarvae,,,,,
+almacojack,earlyjuvenile,,,,,
+almacojack,latejuvenile,,,,,
+almacojack,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+almacojack,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+almacojack,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+almacojack,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+almacojack,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+almacojack,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+almacojack,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+almacojack,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+almacojack,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+almacojack,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+almacojack,spawningadult,near,shelf,er1,shelf_near_er1,ER1 Nearshore Shelf/Slope Edge
+almacojack,spawningadult,near,shelf,er2,shelf_near_er2,ER2 Nearshore Shelf/Slope Edge
+almacojack,spawningadult,near,shelf,er3,shelf_near_er3,ER3 Nearshore Shelf/Slope Edge
+almacojack,spawningadult,near,shelf,er4,shelf_near_er4,ER4 Nearshore Shelf/Slope Edge
+almacojack,spawningadult,near,shelf,er5,shelf_near_er5,ER5 Nearshore Shelf/Slope Edge
+almacojack,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+almacojack,spawningadult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+almacojack,spawningadult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+almacojack,spawningadult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+almacojack,spawningadult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+almacojack,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+almacojack,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+almacojack,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+almacojack,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+almacojack,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+almacojack,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+almacojack,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+almacojack,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+almacojack,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+almacojack,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+blackfinsnapper,egg,,,,,
+blackfinsnapper,larvae,,,,,
+blackfinsnapper,postlarvae,,,,,
+blackfinsnapper,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+blackfinsnapper,earlyjuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+blackfinsnapper,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackfinsnapper,earlyjuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackfinsnapper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+blackfinsnapper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+blackfinsnapper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackfinsnapper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackfinsnapper,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+blackfinsnapper,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+blackfinsnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackfinsnapper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackfinsnapper,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+blackfinsnapper,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+blackfinsnapper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+blackfinsnapper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+blackfinsnapper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackfinsnapper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackgrouper,egg,,,,,
+blackgrouper,larvae,,,,,
+blackgrouper,postlarvae,,,,,
+blackgrouper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+blackgrouper,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+blackgrouper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+blackgrouper,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+blackgrouper,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+blackgrouper,latejuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+blackgrouper,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+blackgrouper,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+blackgrouper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+blackgrouper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+blackgrouper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+blackgrouper,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+blackgrouper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackgrouper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackgrouper,latejuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+blackgrouper,latejuvenile,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+blackgrouper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+blackgrouper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+blackgrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackgrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackgrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+blackgrouper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+blackgrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+blackgrouper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+bluelinetilefish,egg,,,,,
+bluelinetilefish,larvae,,,,,
+bluelinetilefish,postlarvae,,,,,
+bluelinetilefish,earlyjuvenile,,,,,
+bluelinetilefish,latejuvenile,,,,,
+bluelinetilefish,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+bluelinetilefish,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+bluelinetilefish,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+bluelinetilefish,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+bluelinetilefish,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+bluelinetilefish,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+bluelinetilefish,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+bluelinetilefish,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+brownshrimp,egg,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+brownshrimp,egg,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+brownshrimp,egg,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+brownshrimp,larvae,,,,,
+brownshrimp,postlarvae,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+brownshrimp,postlarvae,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+brownshrimp,postlarvae,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+brownshrimp,postlarvae,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+brownshrimp,postlarvae,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+brownshrimp,postlarvae,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+brownshrimp,postlarvae,est,oyster,er3,oyster_est_er3,ER3 Estuarine Oyster Reef
+brownshrimp,postlarvae,est,oyster,er4,oyster_est_er4,ER4 Estuarine Oyster Reef
+brownshrimp,postlarvae,est,oyster,er5,oyster_est_er5,ER5 Estuarine Oyster Reef
+brownshrimp,postlarvae,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+brownshrimp,postlarvae,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+brownshrimp,postlarvae,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+brownshrimp,earlyjuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+brownshrimp,earlyjuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+brownshrimp,earlyjuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+brownshrimp,earlyjuvenile,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+brownshrimp,earlyjuvenile,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+brownshrimp,earlyjuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+brownshrimp,earlyjuvenile,est,oyster,er3,oyster_est_er3,ER3 Estuarine Oyster Reef
+brownshrimp,earlyjuvenile,est,oyster,er4,oyster_est_er4,ER4 Estuarine Oyster Reef
+brownshrimp,earlyjuvenile,est,oyster,er5,oyster_est_er5,ER5 Estuarine Oyster Reef
+brownshrimp,earlyjuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+brownshrimp,earlyjuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+brownshrimp,earlyjuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+brownshrimp,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+brownshrimp,latejuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+brownshrimp,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+brownshrimp,latejuvenile,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+brownshrimp,latejuvenile,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+brownshrimp,latejuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+brownshrimp,latejuvenile,est,oyster,er3,oyster_est_er3,ER3 Estuarine Oyster Reef
+brownshrimp,latejuvenile,est,oyster,er4,oyster_est_er4,ER4 Estuarine Oyster Reef
+brownshrimp,latejuvenile,est,oyster,er5,oyster_est_er5,ER5 Estuarine Oyster Reef
+brownshrimp,latejuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+brownshrimp,latejuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+brownshrimp,latejuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+brownshrimp,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+brownshrimp,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+brownshrimp,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+brownshrimp,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+brownshrimp,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+brownshrimp,adult,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+brownshrimp,adult,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+brownshrimp,adult,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+brownshrimp,adult,off,mangrove,er4,mangrove_off_er4,ER4 Offshore Mangrove
+brownshrimp,adult,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+brownshrimp,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+brownshrimp,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+brownshrimp,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+brownshrimp,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+brownshrimp,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+brownshrimp,spawningadult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+brownshrimp,spawningadult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+brownshrimp,spawningadult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+brownshrimp,spawningadult,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+brownshrimp,spawningadult,off,mangrove,er4,mangrove_off_er4,ER4 Offshore Mangrove
+brownshrimp,spawningadult,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+brownshrimp,spawningadult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+brownshrimp,spawningadult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+brownshrimp,spawningadult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+cobia,egg,,,,,
+cobia,larvae,,,,,
+cobia,postlarvae,,,,,
+cobia,earlyjuvenile,,,,,
+cobia,latejuvenile,,,,,
+cobia,adult,near,shelf,er1,shelf_near_er1,ER1 Nearshore Shelf/Slope Edge
+cobia,adult,near,shelf,er2,shelf_near_er2,ER2 Nearshore Shelf/Slope Edge
+cobia,adult,near,shelf,er3,shelf_near_er3,ER3 Nearshore Shelf/Slope Edge
+cobia,adult,near,shelf,er4,shelf_near_er4,ER4 Nearshore Shelf/Slope Edge
+cobia,adult,near,shelf,er5,shelf_near_er5,ER5 Nearshore Shelf/Slope Edge
+cobia,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+cobia,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+cobia,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+cobia,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+cobia,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+cobia,spawningadult,,,,,
+cuberasnapper,egg,,,,,
+cuberasnapper,larvae,,,,,
+cuberasnapper,postlarvae,,,,,
+cuberasnapper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+cuberasnapper,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+cuberasnapper,earlyjuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+cuberasnapper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+cuberasnapper,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+cuberasnapper,earlyjuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+cuberasnapper,earlyjuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+cuberasnapper,earlyjuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+cuberasnapper,earlyjuvenile,off,em,er1,em_off_er1,ER1 Offshore Emergent Marsh
+cuberasnapper,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+cuberasnapper,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+cuberasnapper,latejuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+cuberasnapper,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+cuberasnapper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+cuberasnapper,latejuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+cuberasnapper,latejuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+cuberasnapper,latejuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+cuberasnapper,latejuvenile,off,em,er1,em_off_er1,ER1 Offshore Emergent Marsh
+cuberasnapper,adult,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+cuberasnapper,adult,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+cuberasnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+cuberasnapper,spawningadult,near,shelf,er1,shelf_near_er1,ER1 Nearshore Shelf/Slope Edge
+cuberasnapper,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+cuberasnapper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+cuberasnapper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+gaggrouper,egg,,,,,
+gaggrouper,larvae,,,,,
+gaggrouper,postlarvae,,,,,
+gaggrouper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+gaggrouper,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+gaggrouper,earlyjuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+gaggrouper,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+gaggrouper,earlyjuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+gaggrouper,earlyjuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+gaggrouper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+gaggrouper,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+gaggrouper,earlyjuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+gaggrouper,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+gaggrouper,earlyjuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+gaggrouper,earlyjuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+gaggrouper,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+gaggrouper,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+gaggrouper,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+gaggrouper,latejuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+gaggrouper,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+gaggrouper,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+gaggrouper,latejuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+gaggrouper,latejuvenile,est,mangrove,er4,mangrove_est_er4,ER4 Estuarine Mangrove
+gaggrouper,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+gaggrouper,latejuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+gaggrouper,latejuvenile,est,hb,er3,hb_est_er3,ER3 Estuarine Hard Bottom
+gaggrouper,latejuvenile,est,hb,er4,hb_est_er4,ER4 Estuarine Hard Bottom
+gaggrouper,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+gaggrouper,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+gaggrouper,latejuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+gaggrouper,latejuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+gaggrouper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+gaggrouper,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+gaggrouper,latejuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+gaggrouper,latejuvenile,near,mangrove,er4,mangrove_near_er4,ER4 Nearshore Mangrove
+gaggrouper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+gaggrouper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+gaggrouper,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+gaggrouper,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+gaggrouper,latejuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+gaggrouper,latejuvenile,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+gaggrouper,latejuvenile,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+gaggrouper,latejuvenile,off,sav,er4,sav_off_er4,ER4 Offshore SAV
+gaggrouper,latejuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+gaggrouper,latejuvenile,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+gaggrouper,latejuvenile,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+gaggrouper,latejuvenile,off,mangrove,er4,mangrove_off_er4,ER4 Offshore Mangrove
+gaggrouper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+gaggrouper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+gaggrouper,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+gaggrouper,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+gaggrouper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+gaggrouper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+gaggrouper,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+gaggrouper,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+gaggrouper,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+gaggrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+gaggrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+gaggrouper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+gaggrouper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+gaggrouper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+gaggrouper,spawningadult,near,shelf,er1,shelf_near_er1,ER1 Nearshore Shelf/Slope Edge
+gaggrouper,spawningadult,near,shelf,er2,shelf_near_er2,ER2 Nearshore Shelf/Slope Edge
+gaggrouper,spawningadult,near,shelf,er3,shelf_near_er3,ER3 Nearshore Shelf/Slope Edge
+gaggrouper,spawningadult,near,shelf,er4,shelf_near_er4,ER4 Nearshore Shelf/Slope Edge
+gaggrouper,spawningadult,near,shelf,er5,shelf_near_er5,ER5 Nearshore Shelf/Slope Edge
+gaggrouper,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+gaggrouper,spawningadult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+gaggrouper,spawningadult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+gaggrouper,spawningadult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+gaggrouper,spawningadult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+gaggrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+gaggrouper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+gaggrouper,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+gaggrouper,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+gaggrouper,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+gaggrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+gaggrouper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+gaggrouper,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+gaggrouper,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+gaggrouper,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+goldfacetilefish,egg,,,,,
+goldfacetilefish,larvae,,,,,
+goldfacetilefish,postlarvae,,,,,
+goldfacetilefish,earlyjuvenile,,,,,
+goldfacetilefish,latejuvenile,,,,,
+goldfacetilefish,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+goldfacetilefish,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+goldfacetilefish,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+goldfacetilefish,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+goldfacetilefish,spawningadult,,,,,
+goliathgrouper,egg,,,,,
+goliathgrouper,larvae,,,,,
+goliathgrouper,postlarvae,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+goliathgrouper,postlarvae,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+goliathgrouper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+goliathgrouper,earlyjuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+goliathgrouper,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+goliathgrouper,earlyjuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+goliathgrouper,earlyjuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+goliathgrouper,earlyjuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+goliathgrouper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+goliathgrouper,earlyjuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+goliathgrouper,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+goliathgrouper,earlyjuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+goliathgrouper,earlyjuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+goliathgrouper,earlyjuvenile,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+goliathgrouper,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+goliathgrouper,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+goliathgrouper,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+goliathgrouper,latejuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+goliathgrouper,latejuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+goliathgrouper,latejuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+goliathgrouper,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+goliathgrouper,latejuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+goliathgrouper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+goliathgrouper,latejuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+goliathgrouper,latejuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+goliathgrouper,latejuvenile,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+goliathgrouper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+goliathgrouper,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+goliathgrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+goliathgrouper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+goliathgrouper,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+goliathgrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+goliathgrouper,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graysnapper,egg,,,,,
+graysnapper,larvae,,,,,
+graysnapper,postlarvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+graysnapper,postlarvae,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+graysnapper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+graysnapper,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+graysnapper,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+graysnapper,earlyjuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+graysnapper,earlyjuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+graysnapper,earlyjuvenile,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+graysnapper,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+graysnapper,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+graysnapper,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+graysnapper,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+graysnapper,latejuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+graysnapper,latejuvenile,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+graysnapper,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+graysnapper,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+graysnapper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+graysnapper,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+graysnapper,latejuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+graysnapper,latejuvenile,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+graysnapper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graysnapper,adult,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+graysnapper,adult,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+graysnapper,adult,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+graysnapper,adult,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+graysnapper,adult,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+graysnapper,adult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+graysnapper,adult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+graysnapper,adult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+graysnapper,adult,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+graysnapper,adult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+graysnapper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graysnapper,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graysnapper,adult,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+graysnapper,adult,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+graysnapper,adult,near,em,er3,em_near_er3,ER3 Nearshore Emergent Marsh
+graysnapper,adult,near,em,er4,em_near_er4,ER4 Nearshore Emergent Marsh
+graysnapper,adult,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+graysnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graysnapper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graysnapper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graysnapper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graysnapper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graysnapper,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+graysnapper,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+graysnapper,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+graysnapper,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+graysnapper,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+graysnapper,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+graysnapper,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+graysnapper,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+graysnapper,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+graysnapper,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+graysnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graysnapper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graysnapper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graysnapper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graysnapper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graysnapper,adult,off,em,er1,em_off_er1,ER1 Offshore Emergent Marsh
+graysnapper,adult,off,em,er2,em_off_er2,ER2 Offshore Emergent Marsh
+graysnapper,adult,off,em,er3,em_off_er3,ER3 Offshore Emergent Marsh
+graysnapper,adult,off,em,er4,em_off_er4,ER4 Offshore Emergent Marsh
+graysnapper,adult,off,em,er5,em_off_er5,ER5 Offshore Emergent Marsh
+graysnapper,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graysnapper,spawningadult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graysnapper,spawningadult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graysnapper,spawningadult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graysnapper,spawningadult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graysnapper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graysnapper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graysnapper,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graysnapper,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graysnapper,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graytriggerfish,egg,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graytriggerfish,egg,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graytriggerfish,egg,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graytriggerfish,egg,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graytriggerfish,egg,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graytriggerfish,egg,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graytriggerfish,egg,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graytriggerfish,egg,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graytriggerfish,egg,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graytriggerfish,egg,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graytriggerfish,larvae,,,,,
+graytriggerfish,postlarvae,,,,,
+graytriggerfish,earlyjuvenile,,,,,
+graytriggerfish,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graytriggerfish,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graytriggerfish,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graytriggerfish,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graytriggerfish,latejuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graytriggerfish,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graytriggerfish,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graytriggerfish,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graytriggerfish,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graytriggerfish,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graytriggerfish,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graytriggerfish,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graytriggerfish,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graytriggerfish,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graytriggerfish,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graytriggerfish,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graytriggerfish,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graytriggerfish,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graytriggerfish,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graytriggerfish,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+graytriggerfish,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+graytriggerfish,spawningadult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+graytriggerfish,spawningadult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+graytriggerfish,spawningadult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+graytriggerfish,spawningadult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+graytriggerfish,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+graytriggerfish,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+graytriggerfish,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+graytriggerfish,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+graytriggerfish,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+greateramberjack,egg,,,,,
+greateramberjack,larvae,,,,,
+greateramberjack,postlarvae,,,,,
+greateramberjack,earlyjuvenile,,,,,
+greateramberjack,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+greateramberjack,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+greateramberjack,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+greateramberjack,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+greateramberjack,latejuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+greateramberjack,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+greateramberjack,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+greateramberjack,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+greateramberjack,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+greateramberjack,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+greateramberjack,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+greateramberjack,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+greateramberjack,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+greateramberjack,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+greateramberjack,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+greateramberjack,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+greateramberjack,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+greateramberjack,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+greateramberjack,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+greateramberjack,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+greateramberjack,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+greateramberjack,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+greateramberjack,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+greateramberjack,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+greateramberjack,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+hogfish,egg,,,,,
+hogfish,larvae,,,,,
+hogfish,postlarvae,,,,,
+hogfish,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+hogfish,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+hogfish,earlyjuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+hogfish,earlyjuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+hogfish,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+hogfish,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+hogfish,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+hogfish,earlyjuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+hogfish,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+hogfish,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+hogfish,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+hogfish,latejuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+hogfish,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+hogfish,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+hogfish,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+hogfish,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+hogfish,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+hogfish,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+hogfish,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+hogfish,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+hogfish,spawningadult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+hogfish,spawningadult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+hogfish,spawningadult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+hogfish,spawningadult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+hogfish,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+hogfish,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+hogfish,spawningadult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+hogfish,spawningadult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+kingmackerel,egg,,,,,
+kingmackerel,larvae,,,,,
+kingmackerel,postlarvae,,,,,
+lanesnapper,postlarvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+lanesnapper,postlarvae,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+lanesnapper,postlarvae,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+lanesnapper,postlarvae,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+lanesnapper,postlarvae,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+lanesnapper,postlarvae,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+lanesnapper,postlarvae,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+lanesnapper,postlarvae,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+lanesnapper,postlarvae,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+lanesnapper,postlarvae,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+lanesnapper,postlarvae,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+lanesnapper,postlarvae,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+lanesnapper,postlarvae,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+lanesnapper,postlarvae,off,sav,er4,sav_off_er4,ER4 Offshore SAV
+lanesnapper,postlarvae,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+lanesnapper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+lanesnapper,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+lanesnapper,earlyjuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+lanesnapper,earlyjuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+lanesnapper,earlyjuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+lanesnapper,earlyjuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+lanesnapper,earlyjuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+lanesnapper,earlyjuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+lanesnapper,earlyjuvenile,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+lanesnapper,earlyjuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+lanesnapper,earlyjuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+lanesnapper,earlyjuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+lanesnapper,earlyjuvenile,est,hb,er3,hb_est_er3,ER3 Estuarine Hard Bottom
+lanesnapper,earlyjuvenile,est,hb,er4,hb_est_er4,ER4 Estuarine Hard Bottom
+lanesnapper,earlyjuvenile,est,hb,er5,hb_est_er5,ER5 Estuarine Hard Bottom
+lanesnapper,earlyjuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+lanesnapper,earlyjuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+lanesnapper,earlyjuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+lanesnapper,earlyjuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+lanesnapper,earlyjuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+lanesnapper,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+lanesnapper,earlyjuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+lanesnapper,earlyjuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+lanesnapper,earlyjuvenile,est,mangrove,er4,mangrove_est_er4,ER4 Estuarine Mangrove
+lanesnapper,earlyjuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+lanesnapper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+lanesnapper,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+lanesnapper,earlyjuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+lanesnapper,earlyjuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+lanesnapper,earlyjuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+lanesnapper,earlyjuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+lanesnapper,earlyjuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+lanesnapper,earlyjuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+lanesnapper,earlyjuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+lanesnapper,earlyjuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+lanesnapper,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+lanesnapper,earlyjuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+lanesnapper,earlyjuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+lanesnapper,earlyjuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+lanesnapper,earlyjuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+lanesnapper,earlyjuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+lanesnapper,earlyjuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+lanesnapper,earlyjuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+lanesnapper,earlyjuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+lanesnapper,earlyjuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+lanesnapper,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+lanesnapper,earlyjuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+lanesnapper,earlyjuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+lanesnapper,earlyjuvenile,near,mangrove,er4,mangrove_near_er4,ER4 Nearshore Mangrove
+lanesnapper,earlyjuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+lanesnapper,earlyjuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+lanesnapper,earlyjuvenile,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+lanesnapper,earlyjuvenile,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+lanesnapper,earlyjuvenile,off,sav,er4,sav_off_er4,ER4 Offshore SAV
+lanesnapper,earlyjuvenile,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+lanesnapper,earlyjuvenile,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+lanesnapper,earlyjuvenile,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+lanesnapper,earlyjuvenile,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+lanesnapper,earlyjuvenile,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+lanesnapper,earlyjuvenile,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+lanesnapper,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+lanesnapper,earlyjuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+lanesnapper,earlyjuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+lanesnapper,earlyjuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+lanesnapper,earlyjuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+lanesnapper,earlyjuvenile,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+lanesnapper,earlyjuvenile,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+lanesnapper,earlyjuvenile,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+lanesnapper,earlyjuvenile,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+lanesnapper,earlyjuvenile,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+lanesnapper,earlyjuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+lanesnapper,earlyjuvenile,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+lanesnapper,earlyjuvenile,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+lanesnapper,earlyjuvenile,off,mangrove,er4,mangrove_off_er4,ER4 Offshore Mangrove
+lanesnapper,earlyjuvenile,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+lanesnapper,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+lanesnapper,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+lanesnapper,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+lanesnapper,latejuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+lanesnapper,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+lanesnapper,latejuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+lanesnapper,latejuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+lanesnapper,latejuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+lanesnapper,latejuvenile,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+lanesnapper,latejuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+lanesnapper,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+lanesnapper,latejuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+lanesnapper,latejuvenile,est,hb,er3,hb_est_er3,ER3 Estuarine Hard Bottom
+lanesnapper,latejuvenile,est,hb,er4,hb_est_er4,ER4 Estuarine Hard Bottom
+lanesnapper,latejuvenile,est,hb,er5,hb_est_er5,ER5 Estuarine Hard Bottom
+lanesnapper,latejuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+lanesnapper,latejuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+lanesnapper,latejuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+lanesnapper,latejuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+lanesnapper,latejuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+lanesnapper,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+lanesnapper,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+lanesnapper,latejuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+lanesnapper,latejuvenile,est,mangrove,er4,mangrove_est_er4,ER4 Estuarine Mangrove
+lanesnapper,latejuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+lanesnapper,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+lanesnapper,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+lanesnapper,latejuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+lanesnapper,latejuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+lanesnapper,latejuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+lanesnapper,latejuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+lanesnapper,latejuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+lanesnapper,latejuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+lanesnapper,latejuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+lanesnapper,latejuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+lanesnapper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+lanesnapper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+lanesnapper,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+lanesnapper,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+lanesnapper,latejuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+lanesnapper,latejuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+lanesnapper,latejuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+lanesnapper,latejuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+lanesnapper,latejuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+lanesnapper,latejuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+lanesnapper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+lanesnapper,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+lanesnapper,latejuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+lanesnapper,latejuvenile,near,mangrove,er4,mangrove_near_er4,ER4 Nearshore Mangrove
+lanesnapper,latejuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+lanesnapper,latejuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+lanesnapper,latejuvenile,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+lanesnapper,latejuvenile,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+lanesnapper,latejuvenile,off,sav,er4,sav_off_er4,ER4 Offshore SAV
+lanesnapper,latejuvenile,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+lanesnapper,latejuvenile,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+lanesnapper,latejuvenile,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+lanesnapper,latejuvenile,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+lanesnapper,latejuvenile,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+lanesnapper,latejuvenile,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+lanesnapper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+lanesnapper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+lanesnapper,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+lanesnapper,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+lanesnapper,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+lanesnapper,latejuvenile,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+lanesnapper,latejuvenile,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+lanesnapper,latejuvenile,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+lanesnapper,latejuvenile,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+lanesnapper,latejuvenile,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+lanesnapper,latejuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+lanesnapper,latejuvenile,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+lanesnapper,latejuvenile,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+lanesnapper,latejuvenile,off,mangrove,er4,mangrove_off_er4,ER4 Offshore Mangrove
+lanesnapper,latejuvenile,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+lanesnapper,adult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+lanesnapper,adult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+lanesnapper,adult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+lanesnapper,adult,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+lanesnapper,adult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+lanesnapper,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+lanesnapper,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+lanesnapper,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+lanesnapper,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+lanesnapper,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+lanesnapper,adult,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+lanesnapper,adult,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+lanesnapper,adult,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+lanesnapper,adult,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+lanesnapper,adult,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+lanesnapper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+lanesnapper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+lanesnapper,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+lanesnapper,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+lanesnapper,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+lanesnapper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+lanesnapper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+lanesnapper,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+lanesnapper,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+lanesnapper,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+lesseramberjack,egg,,,,,
+lesseramberjack,larvae,,,,,
+lesseramberjack,postlarvae,,,,,
+lesseramberjack,earlyjuvenile,,,,,
+lesseramberjack,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+lesseramberjack,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+lesseramberjack,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+lesseramberjack,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+lesseramberjack,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+lesseramberjack,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+lesseramberjack,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+lesseramberjack,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+lesseramberjack,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+lesseramberjack,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+lesseramberjack,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+lesseramberjack,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+lesseramberjack,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+lesseramberjack,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+lesseramberjack,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+muttonsnapper,egg,,,,,
+muttonsnapper,larvae,,,,,
+muttonsnapper,postlarvae,,,,,
+muttonsnapper,earlyjuvenile,,,,,
+muttonsnapper,latejuvenile,,,,,
+muttonsnapper,adult,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+muttonsnapper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+muttonsnapper,adult,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+muttonsnapper,adult,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+muttonsnapper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+muttonsnapper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+pinkshrimp,egg,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+pinkshrimp,egg,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+pinkshrimp,egg,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+pinkshrimp,egg,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+pinkshrimp,larvae,,,,,
+pinkshrimp,postlarvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+pinkshrimp,postlarvae,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+pinkshrimp,postlarvae,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+pinkshrimp,postlarvae,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+pinkshrimp,postlarvae,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+pinkshrimp,postlarvae,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+pinkshrimp,postlarvae,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+pinkshrimp,postlarvae,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+pinkshrimp,postlarvae,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+pinkshrimp,postlarvae,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+pinkshrimp,postlarvae,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+pinkshrimp,postlarvae,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+pinkshrimp,postlarvae,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+pinkshrimp,postlarvae,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+pinkshrimp,postlarvae,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+pinkshrimp,postlarvae,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+pinkshrimp,postlarvae,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+pinkshrimp,postlarvae,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+pinkshrimp,postlarvae,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+pinkshrimp,postlarvae,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+pinkshrimp,postlarvae,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+pinkshrimp,postlarvae,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+pinkshrimp,postlarvae,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+pinkshrimp,postlarvae,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+pinkshrimp,postlarvae,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+pinkshrimp,postlarvae,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+pinkshrimp,postlarvae,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+pinkshrimp,postlarvae,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+pinkshrimp,postlarvae,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+pinkshrimp,postlarvae,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+pinkshrimp,postlarvae,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+pinkshrimp,postlarvae,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+pinkshrimp,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+pinkshrimp,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+pinkshrimp,earlyjuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+pinkshrimp,earlyjuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+pinkshrimp,earlyjuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+pinkshrimp,earlyjuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+pinkshrimp,earlyjuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+pinkshrimp,earlyjuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+pinkshrimp,earlyjuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+pinkshrimp,earlyjuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+pinkshrimp,earlyjuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+pinkshrimp,earlyjuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+pinkshrimp,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+pinkshrimp,earlyjuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+pinkshrimp,earlyjuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+pinkshrimp,earlyjuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+pinkshrimp,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+pinkshrimp,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+pinkshrimp,earlyjuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+pinkshrimp,earlyjuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+pinkshrimp,earlyjuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+pinkshrimp,earlyjuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+pinkshrimp,earlyjuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+pinkshrimp,earlyjuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+pinkshrimp,earlyjuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+pinkshrimp,earlyjuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+pinkshrimp,earlyjuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+pinkshrimp,earlyjuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+pinkshrimp,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+pinkshrimp,earlyjuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+pinkshrimp,earlyjuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+pinkshrimp,earlyjuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+pinkshrimp,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+pinkshrimp,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+pinkshrimp,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+pinkshrimp,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+pinkshrimp,latejuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+pinkshrimp,latejuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+pinkshrimp,latejuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+pinkshrimp,latejuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+pinkshrimp,latejuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+pinkshrimp,latejuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+pinkshrimp,latejuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+pinkshrimp,latejuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+pinkshrimp,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+pinkshrimp,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+pinkshrimp,latejuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+pinkshrimp,latejuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+pinkshrimp,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+pinkshrimp,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+pinkshrimp,latejuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+pinkshrimp,latejuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+pinkshrimp,latejuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+pinkshrimp,latejuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+pinkshrimp,latejuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+pinkshrimp,latejuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+pinkshrimp,latejuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+pinkshrimp,latejuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+pinkshrimp,latejuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+pinkshrimp,latejuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+pinkshrimp,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+pinkshrimp,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+pinkshrimp,latejuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+pinkshrimp,latejuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+pinkshrimp,latejuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+pinkshrimp,latejuvenile,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+pinkshrimp,latejuvenile,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+pinkshrimp,latejuvenile,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+pinkshrimp,latejuvenile,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+pinkshrimp,latejuvenile,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+pinkshrimp,latejuvenile,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+pinkshrimp,latejuvenile,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+pinkshrimp,latejuvenile,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+pinkshrimp,latejuvenile,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+pinkshrimp,latejuvenile,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+pinkshrimp,latejuvenile,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+pinkshrimp,latejuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+pinkshrimp,latejuvenile,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+pinkshrimp,latejuvenile,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+pinkshrimp,latejuvenile,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+pinkshrimp,adult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+pinkshrimp,adult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+pinkshrimp,adult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+pinkshrimp,adult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+pinkshrimp,adult,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+pinkshrimp,adult,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+pinkshrimp,adult,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+pinkshrimp,adult,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+pinkshrimp,adult,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+pinkshrimp,adult,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+pinkshrimp,adult,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+pinkshrimp,adult,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+pinkshrimp,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+pinkshrimp,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+pinkshrimp,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+pinkshrimp,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+pinkshrimp,adult,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+pinkshrimp,adult,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+pinkshrimp,adult,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+pinkshrimp,adult,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+pinkshrimp,adult,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+pinkshrimp,adult,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+pinkshrimp,adult,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+pinkshrimp,adult,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+pinkshrimp,spawningadult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+pinkshrimp,spawningadult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+pinkshrimp,spawningadult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+pinkshrimp,spawningadult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+pinkshrimp,spawningadult,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+pinkshrimp,spawningadult,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+pinkshrimp,spawningadult,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+pinkshrimp,spawningadult,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+pinkshrimp,spawningadult,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+pinkshrimp,spawningadult,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+pinkshrimp,spawningadult,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+pinkshrimp,spawningadult,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+pinkshrimp,spawningadult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+pinkshrimp,spawningadult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+pinkshrimp,spawningadult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+pinkshrimp,spawningadult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+pinkshrimp,spawningadult,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+pinkshrimp,spawningadult,off,mangrove,er2,mangrove_off_er2,ER2 Offshore Mangrove
+pinkshrimp,spawningadult,off,mangrove,er3,mangrove_off_er3,ER3 Offshore Mangrove
+pinkshrimp,spawningadult,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+pinkshrimp,spawningadult,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+pinkshrimp,spawningadult,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+pinkshrimp,spawningadult,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+pinkshrimp,spawningadult,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+queensnapper,egg,,,,,
+queensnapper,larvae,,,,,
+queensnapper,postlarvae,,,,,
+queensnapper,earlyjuvenile,,,,,
+queensnapper,latejuvenile,,,,,
+queensnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+queensnapper,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+queensnapper,spawningadult,,,,,
+reddrum,egg,,,,,
+reddrum,larvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+reddrum,larvae,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+reddrum,larvae,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+reddrum,larvae,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+reddrum,larvae,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+reddrum,larvae,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+reddrum,larvae,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+reddrum,larvae,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+reddrum,larvae,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+reddrum,larvae,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+reddrum,postlarvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+reddrum,postlarvae,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+reddrum,postlarvae,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+reddrum,postlarvae,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+reddrum,postlarvae,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+reddrum,postlarvae,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+reddrum,postlarvae,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+reddrum,postlarvae,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+reddrum,postlarvae,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+reddrum,postlarvae,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+reddrum,postlarvae,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+reddrum,postlarvae,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+reddrum,postlarvae,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+reddrum,postlarvae,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+reddrum,postlarvae,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+reddrum,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+reddrum,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+reddrum,earlyjuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+reddrum,earlyjuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+reddrum,earlyjuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+reddrum,earlyjuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+reddrum,earlyjuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+reddrum,earlyjuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+reddrum,earlyjuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+reddrum,earlyjuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+reddrum,earlyjuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+reddrum,earlyjuvenile,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+reddrum,earlyjuvenile,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+reddrum,earlyjuvenile,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+reddrum,earlyjuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+reddrum,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+reddrum,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+reddrum,earlyjuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+reddrum,earlyjuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+reddrum,earlyjuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+reddrum,earlyjuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+reddrum,earlyjuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+reddrum,earlyjuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+reddrum,earlyjuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+reddrum,earlyjuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+reddrum,earlyjuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+reddrum,earlyjuvenile,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+reddrum,earlyjuvenile,near,em,er3,em_near_er3,ER3 Nearshore Emergent Marsh
+reddrum,earlyjuvenile,near,em,er4,em_near_er4,ER4 Nearshore Emergent Marsh
+reddrum,earlyjuvenile,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+reddrum,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+reddrum,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+reddrum,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+reddrum,latejuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+reddrum,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+reddrum,latejuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+reddrum,latejuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+reddrum,latejuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+reddrum,latejuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+reddrum,latejuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+reddrum,latejuvenile,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+reddrum,latejuvenile,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+reddrum,latejuvenile,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+reddrum,latejuvenile,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+reddrum,latejuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+reddrum,latejuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+reddrum,latejuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+reddrum,latejuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+reddrum,latejuvenile,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+reddrum,latejuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+reddrum,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+reddrum,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+reddrum,latejuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+reddrum,latejuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+reddrum,latejuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+reddrum,latejuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+reddrum,latejuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+reddrum,latejuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+reddrum,latejuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+reddrum,latejuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+reddrum,latejuvenile,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+reddrum,latejuvenile,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+reddrum,latejuvenile,near,em,er3,em_near_er3,ER3 Nearshore Emergent Marsh
+reddrum,latejuvenile,near,em,er4,em_near_er4,ER4 Nearshore Emergent Marsh
+reddrum,latejuvenile,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+reddrum,latejuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+reddrum,latejuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+reddrum,latejuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+reddrum,latejuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+reddrum,latejuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+reddrum,adult,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+reddrum,adult,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+reddrum,adult,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+reddrum,adult,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+reddrum,adult,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+reddrum,adult,est,em,er1,em_est_er1,ER1 Estuarine Emergent Marsh
+reddrum,adult,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+reddrum,adult,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+reddrum,adult,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+reddrum,adult,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+reddrum,adult,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+reddrum,adult,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+reddrum,adult,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+reddrum,adult,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+reddrum,adult,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+reddrum,adult,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+reddrum,adult,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+reddrum,adult,est,hb,er3,hb_est_er3,ER3 Estuarine Hard Bottom
+reddrum,adult,est,hb,er4,hb_est_er4,ER4 Estuarine Hard Bottom
+reddrum,adult,est,hb,er5,hb_est_er5,ER5 Estuarine Hard Bottom
+reddrum,adult,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+reddrum,adult,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+reddrum,adult,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+reddrum,adult,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+reddrum,adult,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+reddrum,adult,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+reddrum,adult,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+reddrum,adult,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+reddrum,adult,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+reddrum,adult,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+reddrum,adult,near,em,er1,em_near_er1,ER1 Nearshore Emergent Marsh
+reddrum,adult,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+reddrum,adult,near,em,er3,em_near_er3,ER3 Nearshore Emergent Marsh
+reddrum,adult,near,em,er4,em_near_er4,ER4 Nearshore Emergent Marsh
+reddrum,adult,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+reddrum,adult,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+reddrum,adult,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+reddrum,adult,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+reddrum,adult,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+reddrum,adult,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+reddrum,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+reddrum,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+reddrum,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+reddrum,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+reddrum,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+reddrum,adult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+reddrum,adult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+reddrum,adult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+reddrum,adult,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+reddrum,adult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+reddrum,adult,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+reddrum,adult,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+reddrum,adult,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+reddrum,adult,off,sav,er4,sav_off_er4,ER4 Offshore SAV
+reddrum,adult,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+reddrum,adult,off,em,er1,em_off_er1,ER1 Offshore Emergent Marsh
+reddrum,adult,off,em,er2,em_off_er2,ER2 Offshore Emergent Marsh
+reddrum,adult,off,em,er3,em_off_er3,ER3 Offshore Emergent Marsh
+reddrum,adult,off,em,er4,em_off_er4,ER4 Offshore Emergent Marsh
+reddrum,adult,off,em,er5,em_off_er5,ER5 Offshore Emergent Marsh
+reddrum,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+reddrum,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+reddrum,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+reddrum,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+reddrum,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+reddrum,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+reddrum,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+reddrum,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+reddrum,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+reddrum,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+reddrum,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+reddrum,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+reddrum,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+reddrum,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+reddrum,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+reddrum,spawningadult,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+reddrum,spawningadult,off,sav,er2,sav_off_er2,ER2 Offshore SAV
+reddrum,spawningadult,off,sav,er3,sav_off_er3,ER3 Offshore SAV
+reddrum,spawningadult,off,sav,er4,sav_off_er4,ER4 Offshore SAV
+reddrum,spawningadult,off,sav,er5,sav_off_er5,ER5 Offshore SAV
+reddrum,spawningadult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+reddrum,spawningadult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+reddrum,spawningadult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+reddrum,spawningadult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+reddrum,spawningadult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+reddrum,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+reddrum,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+reddrum,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+reddrum,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+reddrum,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+reddrum,spawningadult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+reddrum,spawningadult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+reddrum,spawningadult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+reddrum,spawningadult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+reddrum,spawningadult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+redgrouper,egg,,,,,
+redgrouper,larvae,,,,,
+redgrouper,postlarvae,,,,,
+redgrouper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+redgrouper,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+redgrouper,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+redgrouper,earlyjuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+redgrouper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+redgrouper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+redgrouper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+redgrouper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+redgrouper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+redgrouper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+redgrouper,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+redgrouper,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+redgrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+redgrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+redgrouper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+redgrouper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+redgrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+redgrouper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+redgrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+redgrouper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+redsnapper,egg,,,,,
+redsnapper,larvae,,,,,
+redsnapper,postlarvae,,,,,
+redsnapper,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+redsnapper,earlyjuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+redsnapper,earlyjuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+redsnapper,earlyjuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+redsnapper,earlyjuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+redsnapper,earlyjuvenile,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+redsnapper,earlyjuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+redsnapper,earlyjuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+redsnapper,earlyjuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+redsnapper,earlyjuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+redsnapper,earlyjuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+redsnapper,earlyjuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+redsnapper,earlyjuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+redsnapper,earlyjuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+redsnapper,earlyjuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+redsnapper,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+redsnapper,earlyjuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+redsnapper,earlyjuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+redsnapper,earlyjuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+redsnapper,earlyjuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+redsnapper,earlyjuvenile,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+redsnapper,earlyjuvenile,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+redsnapper,earlyjuvenile,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+redsnapper,earlyjuvenile,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+redsnapper,earlyjuvenile,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+redsnapper,earlyjuvenile,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+redsnapper,earlyjuvenile,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+redsnapper,earlyjuvenile,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+redsnapper,earlyjuvenile,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+redsnapper,earlyjuvenile,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+redsnapper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+redsnapper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+redsnapper,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+redsnapper,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+redsnapper,latejuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+redsnapper,latejuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+redsnapper,latejuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+redsnapper,latejuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+redsnapper,latejuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+redsnapper,latejuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+redsnapper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+redsnapper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+redsnapper,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+redsnapper,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+redsnapper,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+redsnapper,latejuvenile,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+redsnapper,latejuvenile,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+redsnapper,latejuvenile,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+redsnapper,latejuvenile,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+redsnapper,latejuvenile,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+redsnapper,adult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+redsnapper,adult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+redsnapper,adult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+redsnapper,adult,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+redsnapper,adult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+redsnapper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+redsnapper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+redsnapper,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+redsnapper,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+redsnapper,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+redsnapper,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+redsnapper,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+redsnapper,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+redsnapper,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+redsnapper,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+redsnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+redsnapper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+redsnapper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+redsnapper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+redsnapper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+redsnapper,spawningadult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+redsnapper,spawningadult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+redsnapper,spawningadult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+redsnapper,spawningadult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+redsnapper,spawningadult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+royalredshrimp,egg,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+royalredshrimp,egg,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+royalredshrimp,larvae,,,,,
+royalredshrimp,postlarvae,,,,,
+royalredshrimp,earlyjuvenile,,,,,
+royalredshrimp,latejuvenile,,,,,
+royalredshrimp,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+royalredshrimp,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+royalredshrimp,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+royalredshrimp,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+royalredshrimp,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+royalredshrimp,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+royalredshrimp,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+royalredshrimp,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+royalredshrimp,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+royalredshrimp,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+royalredshrimp,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+royalredshrimp,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+royalredshrimp,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+royalredshrimp,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+royalredshrimp,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+royalredshrimp,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+royalredshrimp,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+royalredshrimp,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+royalredshrimp,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+royalredshrimp,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+scamp,egg,,,,,
+scamp,larvae,,,,,
+scamp,postlarvae,,,,,
+scamp,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+scamp,earlyjuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+scamp,earlyjuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+scamp,earlyjuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+scamp,earlyjuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+scamp,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+scamp,earlyjuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+scamp,earlyjuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+scamp,earlyjuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+scamp,earlyjuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+scamp,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+scamp,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+scamp,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+scamp,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+scamp,latejuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+scamp,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+scamp,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+scamp,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+scamp,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+scamp,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+scamp,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+scamp,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+scamp,adult,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+scamp,adult,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+scamp,adult,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+scamp,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+scamp,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+scamp,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+scamp,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+scamp,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+scamp,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+scamp,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+scamp,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+scamp,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+scamp,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+scamp,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+scamp,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+scamp,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+silksnapper,egg,,,,,
+silksnapper,larvae,,,,,
+silksnapper,postlarvae,,,,,
+silksnapper,earlyjuvenile,,,,,
+silksnapper,latejuvenile,,,,,
+silksnapper,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+silksnapper,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+silksnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+silksnapper,spawningadult,,,,,
+snowygrouper,egg,,,,,
+snowygrouper,larvae,,,,,
+snowygrouper,postlarvae,,,,,
+snowygrouper,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+snowygrouper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+snowygrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+snowygrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+snowygrouper,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+snowygrouper,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+snowygrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+snowygrouper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+snowygrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+snowygrouper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+spanishmackerel,egg,,,,,
+spanishmackerel,larvae,,,,,
+spanishmackerel,postlarvae,,,,,
+spanishmackerel,earlyjuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+spanishmackerel,earlyjuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+spanishmackerel,earlyjuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+spanishmackerel,earlyjuvenile,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+spanishmackerel,earlyjuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+spanishmackerel,earlyjuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+spanishmackerel,earlyjuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+spanishmackerel,earlyjuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+spanishmackerel,earlyjuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+spanishmackerel,earlyjuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+spanishmackerel,latejuvenile,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+spanishmackerel,latejuvenile,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+spanishmackerel,latejuvenile,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+spanishmackerel,latejuvenile,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+spanishmackerel,latejuvenile,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+spanishmackerel,latejuvenile,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+spanishmackerel,latejuvenile,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+spanishmackerel,latejuvenile,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+spanishmackerel,latejuvenile,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+spanishmackerel,latejuvenile,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+spanishmackerel,latejuvenile,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+spanishmackerel,latejuvenile,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+spanishmackerel,latejuvenile,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+spanishmackerel,latejuvenile,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+spanishmackerel,latejuvenile,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+spanishmackerel,adult,,,,,
+spanishmackerel,spawningadult,,,,,
+speckledhind,egg,,,,,
+speckledhind,larvae,,,,,
+speckledhind,postlarvae,,,,,
+speckledhind,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+speckledhind,earlyjuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+speckledhind,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+speckledhind,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+speckledhind,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+speckledhind,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+speckledhind,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+speckledhind,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+spinylobster,egg,,,,,
+spinylobster,larvae,,,,,
+spinylobster,postlarvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+spinylobster,postlarvae,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+spinylobster,postlarvae,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+spinylobster,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+spinylobster,earlyjuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+spinylobster,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+spinylobster,earlyjuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+spinylobster,earlyjuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+spinylobster,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+spinylobster,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+spinylobster,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+spinylobster,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+spinylobster,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+spinylobster,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+spinylobster,latejuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+spinylobster,adult,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+spinylobster,adult,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+spinylobster,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+spinylobster,adult,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+spinylobster,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+spinylobster,adult,off,sav,er1,sav_off_er1,ER1 Offshore SAV
+spinylobster,spawningadult,,,,,
+tilefish,egg,,,,,
+tilefish,larvae,,,,,
+tilefish,postlarvae,,,,,
+tilefish,earlyjuvenile,,,,,
+tilefish,latejuvenile,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+tilefish,latejuvenile,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+tilefish,latejuvenile,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+tilefish,latejuvenile,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+tilefish,latejuvenile,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+tilefish,latejuvenile,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+tilefish,latejuvenile,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+tilefish,latejuvenile,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+tilefish,latejuvenile,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+tilefish,latejuvenile,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+tilefish,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+tilefish,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+tilefish,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+tilefish,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+tilefish,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+tilefish,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+tilefish,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+tilefish,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+tilefish,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+tilefish,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+tilefish,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+tilefish,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+tilefish,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+tilefish,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+tilefish,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+tilefish,spawningadult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+tilefish,spawningadult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+tilefish,spawningadult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+tilefish,spawningadult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+tilefish,spawningadult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+vermillionsnapper,egg,,,,,
+vermillionsnapper,larvae,,,,,
+vermillionsnapper,postlarvae,,,,,
+vermillionsnapper,earlyjuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+vermillionsnapper,earlyjuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+vermillionsnapper,earlyjuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+vermillionsnapper,earlyjuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+vermillionsnapper,earlyjuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+vermillionsnapper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+vermillionsnapper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+vermillionsnapper,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+vermillionsnapper,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+vermillionsnapper,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+vermillionsnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+vermillionsnapper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+vermillionsnapper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+vermillionsnapper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+vermillionsnapper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+vermillionsnapper,spawningadult,,,,,
+warsawgrouper,egg,,,,,
+warsawgrouper,larvae,,,,,
+warsawgrouper,postlarvae,,,,,
+warsawgrouper,earlyjuvenile,,,,,
+warsawgrouper,earlyjuvenile,,,,,
+warsawgrouper,earlyjuvenile,,,,,
+warsawgrouper,earlyjuvenile,,,,,
+warsawgrouper,earlyjuvenile,,,,,
+warsawgrouper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+warsawgrouper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+warsawgrouper,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+warsawgrouper,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+warsawgrouper,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+warsawgrouper,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+warsawgrouper,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+warsawgrouper,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+warsawgrouper,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+warsawgrouper,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+warsawgrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+warsawgrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+warsawgrouper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+warsawgrouper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+warsawgrouper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+warsawgrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+warsawgrouper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+warsawgrouper,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+warsawgrouper,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+warsawgrouper,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+warsawgrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+warsawgrouper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+warsawgrouper,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+warsawgrouper,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+warsawgrouper,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+wenchman,egg,,,,,
+wenchman,larvae,,,,,
+wenchman,postlarvae,,,,,
+wenchman,earlyjuvenile,,,,,
+wenchman,latejuvenile,,,,,
+wenchman,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+wenchman,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+wenchman,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+wenchman,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+wenchman,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+wenchman,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+wenchman,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+wenchman,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+wenchman,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+wenchman,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+wenchman,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+wenchman,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+wenchman,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+wenchman,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+wenchman,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+whiteshrimp,egg,,,,,
+whiteshrimp,larvae,,,,,
+whiteshrimp,postlarvae,,,,,
+whiteshrimp,earlyjuvenile,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+whiteshrimp,earlyjuvenile,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+whiteshrimp,earlyjuvenile,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+whiteshrimp,earlyjuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+whiteshrimp,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+whiteshrimp,earlyjuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+whiteshrimp,earlyjuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+whiteshrimp,earlyjuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+whiteshrimp,earlyjuvenile,est,oyster,er2,oyster_est_er2,ER2 Estuarine Oyster Reef
+whiteshrimp,earlyjuvenile,est,oyster,er3,oyster_est_er3,ER3 Estuarine Oyster Reef
+whiteshrimp,earlyjuvenile,est,oyster,er4,oyster_est_er4,ER4 Estuarine Oyster Reef
+whiteshrimp,earlyjuvenile,est,oyster,er5,oyster_est_er5,ER5 Estuarine Oyster Reef
+whiteshrimp,earlyjuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+whiteshrimp,earlyjuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+whiteshrimp,earlyjuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+whiteshrimp,earlyjuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+whiteshrimp,earlyjuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+whiteshrimp,earlyjuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+whiteshrimp,earlyjuvenile,est,mangrove,er4,mangrove_est_er4,ER4 Estuarine Mangrove
+whiteshrimp,earlyjuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+whiteshrimp,earlyjuvenile,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+whiteshrimp,earlyjuvenile,near,em,er3,em_near_er3,ER3 Nearshore Emergent Marsh
+whiteshrimp,earlyjuvenile,near,em,er4,em_near_er4,ER4 Nearshore Emergent Marsh
+whiteshrimp,earlyjuvenile,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+whiteshrimp,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+whiteshrimp,earlyjuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+whiteshrimp,earlyjuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+whiteshrimp,earlyjuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+whiteshrimp,earlyjuvenile,near,oyster,er2,oyster_near_er2,ER2 Nearshore Oyster Reef
+whiteshrimp,earlyjuvenile,near,oyster,er3,oyster_near_er3,ER3 Nearshore Oyster Reef
+whiteshrimp,earlyjuvenile,near,oyster,er4,oyster_near_er4,ER4 Nearshore Oyster Reef
+whiteshrimp,earlyjuvenile,near,oyster,er5,oyster_near_er5,ER5 Nearshore Oyster Reef
+whiteshrimp,earlyjuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+whiteshrimp,earlyjuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+whiteshrimp,earlyjuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+whiteshrimp,earlyjuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+whiteshrimp,earlyjuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+whiteshrimp,earlyjuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+whiteshrimp,earlyjuvenile,near,mangrove,er4,mangrove_near_er4,ER4 Nearshore Mangrove
+whiteshrimp,earlyjuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+whiteshrimp,latejuvenile,est,em,er2,em_est_er2,ER2 Estuarine Emergent Marsh
+whiteshrimp,latejuvenile,est,em,er3,em_est_er3,ER3 Estuarine Emergent Marsh
+whiteshrimp,latejuvenile,est,em,er4,em_est_er4,ER4 Estuarine Emergent Marsh
+whiteshrimp,latejuvenile,est,em,er5,em_est_er5,ER5 Estuarine Emergent Marsh
+whiteshrimp,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+whiteshrimp,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
+whiteshrimp,latejuvenile,est,sav,er4,sav_est_er4,ER4 Estuarine SAV
+whiteshrimp,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+whiteshrimp,latejuvenile,est,oyster,er2,oyster_est_er2,ER2 Estuarine Oyster Reef
+whiteshrimp,latejuvenile,est,oyster,er3,oyster_est_er3,ER3 Estuarine Oyster Reef
+whiteshrimp,latejuvenile,est,oyster,er4,oyster_est_er4,ER4 Estuarine Oyster Reef
+whiteshrimp,latejuvenile,est,oyster,er5,oyster_est_er5,ER5 Estuarine Oyster Reef
+whiteshrimp,latejuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+whiteshrimp,latejuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+whiteshrimp,latejuvenile,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+whiteshrimp,latejuvenile,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+whiteshrimp,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+whiteshrimp,latejuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
+whiteshrimp,latejuvenile,est,mangrove,er4,mangrove_est_er4,ER4 Estuarine Mangrove
+whiteshrimp,latejuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+whiteshrimp,latejuvenile,near,em,er2,em_near_er2,ER2 Nearshore Emergent Marsh
+whiteshrimp,latejuvenile,near,em,er3,em_near_er3,ER3 Nearshore Emergent Marsh
+whiteshrimp,latejuvenile,near,em,er4,em_near_er4,ER4 Nearshore Emergent Marsh
+whiteshrimp,latejuvenile,near,em,er5,em_near_er5,ER5 Nearshore Emergent Marsh
+whiteshrimp,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+whiteshrimp,latejuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
+whiteshrimp,latejuvenile,near,sav,er4,sav_near_er4,ER4 Nearshore SAV
+whiteshrimp,latejuvenile,near,sav,er5,sav_near_er5,ER5 Nearshore SAV
+whiteshrimp,latejuvenile,near,oyster,er2,oyster_near_er2,ER2 Nearshore Oyster Reef
+whiteshrimp,latejuvenile,near,oyster,er3,oyster_near_er3,ER3 Nearshore Oyster Reef
+whiteshrimp,latejuvenile,near,oyster,er4,oyster_near_er4,ER4 Nearshore Oyster Reef
+whiteshrimp,latejuvenile,near,oyster,er5,oyster_near_er5,ER5 Nearshore Oyster Reef
+whiteshrimp,latejuvenile,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+whiteshrimp,latejuvenile,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+whiteshrimp,latejuvenile,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+whiteshrimp,latejuvenile,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+whiteshrimp,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+whiteshrimp,latejuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
+whiteshrimp,latejuvenile,near,mangrove,er4,mangrove_near_er4,ER4 Nearshore Mangrove
+whiteshrimp,latejuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+whiteshrimp,adult,near,sb,er1,sb_near_er1,ER1 Nearshore Soft Bottom
+whiteshrimp,adult,near,sb,er2,sb_near_er2,ER2 Nearshore Soft Bottom
+whiteshrimp,adult,near,sb,er3,sb_near_er3,ER3 Nearshore Soft Bottom
+whiteshrimp,adult,near,sb,er4,sb_near_er4,ER4 Nearshore Soft Bottom
+whiteshrimp,adult,near,sb,er5,sb_near_er5,ER5 Nearshore Soft Bottom
+whiteshrimp,adult,near,sand,er1,sand_near_er1,ER1 Nearshore Sand
+whiteshrimp,adult,near,sand,er2,sand_near_er2,ER2 Nearshore Sand
+whiteshrimp,adult,near,sand,er3,sand_near_er3,ER3 Nearshore Sand
+whiteshrimp,adult,near,sand,er4,sand_near_er4,ER4 Nearshore Sand
+whiteshrimp,adult,near,sand,er5,sand_near_er5,ER5 Nearshore Sand
+whiteshrimp,adult,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
+whiteshrimp,adult,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
+whiteshrimp,adult,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
+whiteshrimp,adult,est,sb,er4,sb_est_er4,ER4 Estuarine Soft Bottom
+whiteshrimp,adult,est,sb,er5,sb_est_er5,ER5 Estuarine Soft Bottom
+whiteshrimp,adult,est,sand,er1,sand_est_er1,ER1 Estuarine Sand
+whiteshrimp,adult,est,sand,er2,sand_est_er2,ER2 Estuarine Sand
+whiteshrimp,adult,est,sand,er3,sand_est_er3,ER3 Estuarine Sand
+whiteshrimp,adult,est,sand,er4,sand_est_er4,ER4 Estuarine Sand
+whiteshrimp,adult,est,sand,er5,sand_est_er5,ER5 Estuarine Sand
+whiteshrimp,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+whiteshrimp,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+whiteshrimp,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+whiteshrimp,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+whiteshrimp,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+whiteshrimp,adult,off,sand,er1,sand_off_er1,ER1 Offshore Sand
+whiteshrimp,adult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
+whiteshrimp,adult,off,sand,er3,sand_off_er3,ER3 Offshore Sand
+whiteshrimp,adult,off,sand,er4,sand_off_er4,ER4 Offshore Sand
+whiteshrimp,adult,off,sand,er5,sand_off_er5,ER5 Offshore Sand
+whiteshrimp,spawningadult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+whiteshrimp,spawningadult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+whiteshrimp,spawningadult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+whiteshrimp,spawningadult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+whiteshrimp,spawningadult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+yellowedgegrouper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+yellowedgegrouper,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
+yellowedgegrouper,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
+yellowedgegrouper,latejuvenile,near,hb,er5,hb_near_er5,ER5 Nearshore Hard Bottom
+yellowedgegrouper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowedgegrouper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+yellowedgegrouper,latejuvenile,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+yellowedgegrouper,latejuvenile,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+yellowedgegrouper,latejuvenile,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+yellowedgegrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowedgegrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+yellowedgegrouper,adult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+yellowedgegrouper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+yellowedgegrouper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+yellowedgegrouper,adult,off,sb,er1,sb_off_er1,ER1 Offshore Soft Bottom
+yellowedgegrouper,adult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
+yellowedgegrouper,adult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
+yellowedgegrouper,adult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
+yellowedgegrouper,adult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+yellowedgegrouper,adult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+yellowedgegrouper,adult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+yellowedgegrouper,adult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+yellowedgegrouper,adult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+yellowedgegrouper,adult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+yellowedgegrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+yellowedgegrouper,spawningadult,off,shelf,er2,shelf_off_er2,ER2 Offshore Shelf/Slope Edge
+yellowedgegrouper,spawningadult,off,shelf,er3,shelf_off_er3,ER3 Offshore Shelf/Slope Edge
+yellowedgegrouper,spawningadult,off,shelf,er4,shelf_off_er4,ER4 Offshore Shelf/Slope Edge
+yellowedgegrouper,spawningadult,off,shelf,er5,shelf_off_er5,ER5 Offshore Shelf/Slope Edge
+yellowedgegrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowedgegrouper,spawningadult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+yellowedgegrouper,spawningadult,off,hb,er3,hb_off_er3,ER3 Offshore Hard Bottom
+yellowedgegrouper,spawningadult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+yellowedgegrouper,spawningadult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+yellowfingrouper,egg,,,,,
+yellowfingrouper,larvae,,,,,
+yellowfingrouper,postlarvae,,,,,
+yellowfingrouper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+yellowfingrouper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+yellowfingrouper,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+yellowfingrouper,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+yellowfingrouper,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+yellowfingrouper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+yellowfingrouper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+yellowfingrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowfingrouper,spawningadult,off,shelf,er1,shelf_off_er1,ER1 Offshore Shelf/Slope Edge
+yellowfingrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowmouthgrouper,egg,,,,,
+yellowmouthgrouper,larvae,,,,,
+yellowmouthgrouper,postlarvae,,,,,
+yellowmouthgrouper,earlyjuvenile,,,,,
+yellowmouthgrouper,latejuvenile,,,,,
+yellowmouthgrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowmouthgrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+yellowmouthgrouper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom
+yellowmouthgrouper,adult,off,hb,er5,hb_off_er5,ER5 Offshore Hard Bottom
+yellowmouthgrouper,spawningadult,,,,,
+yellowtailsnapper,egg,,,,,
+yellowtailsnapper,larvae,,,,,
+yellowtailsnapper,postlarvae,,,,,
+yellowtailsnapper,earlyjuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
+yellowtailsnapper,earlyjuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
+yellowtailsnapper,earlyjuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
+yellowtailsnapper,earlyjuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
+yellowtailsnapper,earlyjuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
+yellowtailsnapper,earlyjuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
+yellowtailsnapper,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+yellowtailsnapper,earlyjuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
+yellowtailsnapper,latejuvenile,est,hb,er1,hb_est_er1,ER1 Estuarine Hard Bottom
+yellowtailsnapper,latejuvenile,est,hb,er2,hb_est_er2,ER2 Estuarine Hard Bottom
+yellowtailsnapper,latejuvenile,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+yellowtailsnapper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+yellowtailsnapper,latejuvenile,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowtailsnapper,latejuvenile,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+yellowtailsnapper,adult,near,hb,er1,hb_near_er1,ER1 Nearshore Hard Bottom
+yellowtailsnapper,adult,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
+yellowtailsnapper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
+yellowtailsnapper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
+yellowtailsnapper,spawningadult,,,,,
