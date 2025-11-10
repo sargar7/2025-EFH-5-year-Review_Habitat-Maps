@@ -37,8 +37,11 @@ polygon_layer_data <-read.csv("species_habitat_NOWCA_101525.csv", stringsAsFacto
 polygon_layer_data <- polygon_layer_data %>%
   filter(!(habitatzone == "off" & habitattype %in% c("mangrove", "em", "sav")))
 
+# Load EFH descriptor CSV once so it's available in the server
+efh_descriptors <- read.csv("efh_descriptors.csv", stringsAsFactors = FALSE)
+
 #Load EFH RDS data 
-rds_base_dir <- "RDS_Species_Habitat_101525_NOWCA"
+rds_base_dir <- "RDS_Species_Habitat_101725"
 
 
 # Life stages and labels
@@ -122,7 +125,7 @@ habitat_palette <- c(
   "Submerged Aquatic Vegetation" = "#CCEBC5", # mint green
   "Soft Bottom"                  = "#E5C494", # tan/beige
   "Shelf/Slope Edge"             = "#FFED6F", # bright pastel yellow
-  "Water Column Associated"      = "#BC80BD"  # pastel magenta/purple
+  "Water Column Associated"      = "purple"  
 )
 
 

@@ -32,7 +32,7 @@ fluidPage(
   sidebarLayout(
     sidebarPanel(
       tags$h4("Project Overview"),
-      tags$p("This app allows users to explore EFH polygons for managed species by life stage."),
+      tags$p("This app allows users to explore Essential Fish Habitat Descriptions and Identifications for managed species by life stage."),
       
       actionButton("start_tour", "Take Tour", class = "btn-primary"),
       actionButton("efh_descriptions", "EFH Descriptions", class = "btn-info"),
@@ -93,6 +93,7 @@ fluidPage(
                          selected = "Adult"),
       
       tags$div("Data updated: 2024", style = "font-size:80%; color:darkgrey;"),
+      tags$div("App Updated October 17,2025", style = "font-size:80%; color:darkgrey;"),
       tags$div("Contact: sarah.gardiner@gulfcouncil.org for more information", style="font-size:80%; color:grey;")
     ),
     

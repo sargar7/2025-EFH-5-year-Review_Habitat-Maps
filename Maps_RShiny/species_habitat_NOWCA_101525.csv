@@ -517,6 +517,12 @@ hogfish,spawningadult,off,sand,er2,sand_off_er2,ER2 Offshore Sand
 kingmackerel,egg,,,,,
 kingmackerel,larvae,,,,,
 kingmackerel,postlarvae,,,,,
+kingmackerel,earlyjuvenile,,,,,
+kingmackerel,latejuvenile,,,,,
+kingmackerel,adult,,,,,
+kingmackerel,spawningadult,,,,,
+lanesnapper,egg,,,,,
+lanesnapper,larvae,,,,,
 lanesnapper,postlarvae,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
 lanesnapper,postlarvae,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
 lanesnapper,postlarvae,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
@@ -810,6 +816,10 @@ pinkshrimp,latejuvenile,est,sav,er1,sav_est_er1,ER1 Estuarine SAV
 pinkshrimp,latejuvenile,est,sav,er2,sav_est_er2,ER2 Estuarine SAV
 pinkshrimp,latejuvenile,est,sav,er3,sav_est_er3,ER3 Estuarine SAV
 pinkshrimp,latejuvenile,est,sav,er5,sav_est_er5,ER5 Estuarine SAV
+pinkshrimp,latejuvenile,est,oyster,er1,oyster_est_er1,ER1 Estuarine Oyster Reef
+pinkshrimp,latejuvenile,est,oyster,er2,oyster_est_er2,ER2 Estuarine Oyster Reef
+pinkshrimp,latejuvenile,est,oyster,er3,oyster_est_er3,ER3 Estuarine Oyster Reef
+pinkshrimp,latejuvenile,est,oyster,er5,oyster_est_er5,ER5 Estuarine Oyster Reef
 pinkshrimp,latejuvenile,est,sb,er1,sb_est_er1,ER1 Estuarine Soft Bottom
 pinkshrimp,latejuvenile,est,sb,er2,sb_est_er2,ER2 Estuarine Soft Bottom
 pinkshrimp,latejuvenile,est,sb,er3,sb_est_er3,ER3 Estuarine Soft Bottom
@@ -822,6 +832,10 @@ pinkshrimp,latejuvenile,est,mangrove,er1,mangrove_est_er1,ER1 Estuarine Mangrove
 pinkshrimp,latejuvenile,est,mangrove,er2,mangrove_est_er2,ER2 Estuarine Mangrove
 pinkshrimp,latejuvenile,est,mangrove,er3,mangrove_est_er3,ER3 Estuarine Mangrove
 pinkshrimp,latejuvenile,est,mangrove,er5,mangrove_est_er5,ER5 Estuarine Mangrove
+pinkshrimp,latejuvenile,near,oyster,er1,oyster_near_er1,ER1 Nearshore Oyster Reef
+pinkshrimp,latejuvenile,near,oyster,er2,oyster_near_er2,ER2 Nearshore Oyster Reef
+pinkshrimp,latejuvenile,near,oyster,er3,oyster_near_er3,ER3 Nearshore Oyster Reef
+pinkshrimp,latejuvenile,near,oyster,er5,oyster_near_er5,ER5 Nearshore Oyster Reef
 pinkshrimp,latejuvenile,near,sav,er1,sav_near_er1,ER1 Nearshore SAV
 pinkshrimp,latejuvenile,near,sav,er2,sav_near_er2,ER2 Nearshore SAV
 pinkshrimp,latejuvenile,near,sav,er3,sav_near_er3,ER3 Nearshore SAV
@@ -838,6 +852,10 @@ pinkshrimp,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangro
 pinkshrimp,latejuvenile,near,mangrove,er2,mangrove_near_er2,ER2 Nearshore Mangrove
 pinkshrimp,latejuvenile,near,mangrove,er3,mangrove_near_er3,ER3 Nearshore Mangrove
 pinkshrimp,latejuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+pinkshrimp,latejuvenile,off,oyster,er1,oyster_off_er1,ER1 Offshore Oyster Reef
+pinkshrimp,latejuvenile,off,oyster,er2,oyster_off_er2,ER2 Offshore Oyster Reef
+pinkshrimp,latejuvenile,off,oyster,er3,oyster_off_er3,ER3 Offshore Oyster Reef
+pinkshrimp,latejuvenile,off,oyster,er5,oyster_off_er4,ER5 Offshore Oyster Reef
 pinkshrimp,latejuvenile,off,sav,er1,sav_off_er1,ER1 Offshore SAV
 pinkshrimp,latejuvenile,off,sav,er2,sav_off_er2,ER2 Offshore SAV
 pinkshrimp,latejuvenile,off,sav,er3,sav_off_er3,ER3 Offshore SAV
@@ -1580,6 +1598,10 @@ whiteshrimp,spawningadult,off,sb,er2,sb_off_er2,ER2 Offshore Soft Bottom
 whiteshrimp,spawningadult,off,sb,er3,sb_off_er3,ER3 Offshore Soft Bottom
 whiteshrimp,spawningadult,off,sb,er4,sb_off_er4,ER4 Offshore Soft Bottom
 whiteshrimp,spawningadult,off,sb,er5,sb_off_er5,ER5 Offshore Soft Bottom
+yellowedgegrouper,egg,,,,,
+yellowedgegrouper,larvae,,,,,
+yellowedgegrouper,postlarvae,,,,,
+yellowedgegrouper,earlyjuvenile,,,,,
 yellowedgegrouper,latejuvenile,near,hb,er2,hb_near_er2,ER2 Nearshore Hard Bottom
 yellowedgegrouper,latejuvenile,near,hb,er3,hb_near_er3,ER3 Nearshore Hard Bottom
 yellowedgegrouper,latejuvenile,near,hb,er4,hb_near_er4,ER4 Nearshore Hard Bottom
@@ -1630,8 +1652,14 @@ yellowfingrouper,spawningadult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
 yellowmouthgrouper,egg,,,,,
 yellowmouthgrouper,larvae,,,,,
 yellowmouthgrouper,postlarvae,,,,,
-yellowmouthgrouper,earlyjuvenile,,,,,
-yellowmouthgrouper,latejuvenile,,,,,
+yellowmouthgrouper,earlyjuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+yellowmouthgrouper,earlyjuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+yellowmouthgrouper,earlyjuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+yellowmouthgrouper,earlyjuvenile,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
+yellowmouthgrouper,latejuvenile,near,mangrove,er1,mangrove_near_er1,ER1 Nearshore Mangrove
+yellowmouthgrouper,latejuvenile,near,mangrove,er5,mangrove_near_er5,ER5 Nearshore Mangrove
+yellowmouthgrouper,latejuvenile,off,mangrove,er1,mangrove_off_er1,ER1 Offshore Mangrove
+yellowmouthgrouper,latejuvenile,off,mangrove,er5,mangrove_off_er5,ER5 Offshore Mangrove
 yellowmouthgrouper,adult,off,hb,er1,hb_off_er1,ER1 Offshore Hard Bottom
 yellowmouthgrouper,adult,off,hb,er2,hb_off_er2,ER2 Offshore Hard Bottom
 yellowmouthgrouper,adult,off,hb,er4,hb_off_er4,ER4 Offshore Hard Bottom

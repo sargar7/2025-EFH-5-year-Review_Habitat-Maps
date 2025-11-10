@@ -179,81 +179,54 @@ function(input, output, session) {
     }
   })
   
-  # EFH Descriptions Modal
+  # EFH Descriptions Modal (with italics from no_spatial column)
   observeEvent(input$efh_descriptions, {
     species_code <- input$selected_species
     
     info_html <- if (species_code != "") {
-      # Filter polygon_layer_data for selected species and all life stages ### CHANGED
-      info_filtered <- polygon_layer_data %>%
-        filter(species == species_code, lifestage %in% lifestages) %>%
-        select(lifestage, habitatzone, habitattype, ecoregion, shapefile_name) %>%  ### CHANGED: include shapefile_name if you want to display
-        distinct()
       
-      # Helper function to format attributes cleanly
-      format_attributes <- function(habitat_type, habitat_zone, ecoregion) {
-        attrs <- c(
-          ifelse(is.na(habitat_type) | habitat_type == "", NA, habitat_type),
-          ifelse(is.na(habitat_zone)  | habitat_zone == "", NA, habitat_zone),
-          ifelse(is.na(ecoregion)     | ecoregion == "", NA, ecoregion)
-        )
-        if (all(is.na(attrs))) return("No spatial data available")
-        paste(na.omit(attrs), collapse = " ")  # space-separated for clean display ### CHANGED
-      }
+      # Normalize species for matching
+      selected_species <- tolower(species_code)
       
-      # Build EFH description per life stage
-      if (nrow(info_filtered) == 0) {
-        "<b>No spatial data available.</b>"  ### # CHANGED: if no data at all
-      } else {
-        paste(
-          sapply(lifestages, function(ls) {
-            df_stage <- info_filtered %>% filter(lifestage == ls)
-            
-            if (nrow(df_stage) == 0) {
-              return(paste0("<b>", lifestage_labels[[ls]], ":</b> No spatial data available"))
-            }
-            
-            # Recode attributes to pretty names ### CHANGED
-            df_stage <- df_stage %>%
-              mutate(
-                habitat_pretty = recode(tolower(habitattype), !!!habitat_map, .default = ""),
-                zone_pretty    = recode(tolower(habitatzone), !!!zone_map, .default = ""),
-                er_pretty      = recode(tolower(ecoregion), !!!er_map, .default = "")
-              )
-            
-            simplified <- df_stage %>%
-              group_by(zone_pretty, habitat_pretty) %>%
-              summarise(
-                er_range = if (n_distinct(er_pretty) > 1) paste0(min(er_pretty), "–", max(er_pretty)) else unique(er_pretty),
-                .groups = "drop"
-              )
-            
-            # Format each row with helper function to avoid repeated "No information" messages
-            stage_text <- sapply(seq_len(nrow(simplified)), function(i) {
-              format_attributes(
-                simplified$habitat_pretty[i],
-                simplified$zone_pretty[i],
-                simplified$er_range[i]
-              )
-            })
-            
-            paste0("<b>", lifestage_labels[[ls]], ":</b> ", paste(stage_text, collapse = "; "))
-          }),
-          collapse = "<br><br>"
-        )
-      }
+      # Filter descriptors for this species
+      species_desc <- efh_descriptors %>%
+        filter(species == selected_species)
+      
+      # Build block per life stage
+      blocks <- lapply(lifestages, function(ls) {
+        desc_row <- species_desc %>% filter(lifestage == tolower(ls))
+        
+        # Main EFH text
+        main_text <- if (nrow(desc_row) > 0 && !is.na(desc_row$efh) && trimws(desc_row$efh) != "") {
+          desc_row$efh
+        } else {
+          "No descriptor provided."
+        }
+        
+        # No spatial text (italicized)
+        italic_text <- if (nrow(desc_row) > 0 && !is.na(desc_row$no_spatial) && trimws(desc_row$no_spatial) != "") {
+          paste0(" <i>", desc_row$no_spatial, "</i>")
+        } else {
+          ""
+        }
+        
+        # Combine main and italic text
+        paste0("<b>", lifestage_labels[[ls]], ":</b> ", main_text, italic_text)
+      })
+      
+      # Combine all life stages with spacing
+      paste(blocks, collapse = "<br><br>")
       
     } else {
       "<b>No species selected.</b>"
     }
     
-    ### Show modal with cleaned EFH descriptions
+    # Show modal
     showModal(modalDialog(
       title = paste("Habitat Layer Descriptions for", ifelse(species_code == "", "None", species_code)),
       tagList(
-        tags$p("EFH polygons are visualized by species and life stage."),
-        tags$p("Below are the habitat attributes associated with each life stage broken out by eco-region and coastal zone:"),
-        HTML(info_html),
+        tags$p("Below are the habitat types associated with each life stage:"),
+        HTML(info_html),  # preserves HTML/italics
         tags$hr(),
         tags$p(
           "Updated Metadata are provided through Council contracted work completed in 2023/2024, available ",
